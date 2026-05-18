@@ -47,7 +47,7 @@ export default function MyLots() {
         </p>
       </div>
 
-      <div className="bg-white rounded-lg border border-rose-100/60 overflow-hidden">
+      <div className="bg-white/10 backdrop-blur-md rounded-lg border border-rose-100/60 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>

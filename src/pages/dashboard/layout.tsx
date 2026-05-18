@@ -21,7 +21,7 @@ export default function DashboardLayout() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white/30">
+      <div className="min-h-screen flex items-center justify-center bg-white/10">
         <div className="flex items-center gap-3 text-rose-800/60">
           <i className="ri-loader-4-line animate-spin text-xl" />
           <span className="text-sm">Cargando...</span>
@@ -47,7 +47,7 @@ export default function DashboardLayout() {
         }}
       >
         {/* Overlay suave para legibilidad */}
-        <div className="absolute inset-0 bg-white/88" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       {/* Sidebar */}

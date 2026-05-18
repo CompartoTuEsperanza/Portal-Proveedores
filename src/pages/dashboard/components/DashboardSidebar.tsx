@@ -24,7 +24,7 @@ export default function DashboardSidebar() {
   return (
     <>
       {/* Mobile hamburger */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white border-b border-rose-100/60 px-4 py-3 flex items-center justify-between">
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-black/30 backdrop-blur-md border-b border-rose-100/60 px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img
             src="https://public.readdy.ai/ai/img_res/c99949a7-105a-4e7e-b54f-999d11a6f167.png"
@@ -42,7 +42,7 @@ export default function DashboardSidebar() {
       </div>
 
       {/* Sidebar - Desktop */}
-      <aside className="hidden lg:flex w-64 flex-shrink-0 flex-col bg-gradient-to-b from-white to-rose-50/50 border-r border-rose-100/40 min-h-screen">
+      <aside className="hidden lg:flex w-64 flex-shrink-0 flex-col bg-black/25 backdrop-blur-md border-r border-rose-100/40 min-h-screen">
         {/* Logo area */}
         <div className="px-6 py-5 border-b border-rose-100/40">
           <div className="flex items-center gap-3">
@@ -99,7 +99,7 @@ export default function DashboardSidebar() {
       {mobileOpen && (
         <div className="lg:hidden fixed inset-0 z-50 bg-black/50" onClick={() => setMobileOpen(false)}>
           <div
-            className="absolute left-0 top-0 bottom-0 w-72 bg-white shadow-xl flex flex-col"
+            className="absolute left-0 top-0 bottom-0 w-72 bg-black/30 backdrop-blur-lg shadow-xl flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Mobile sidebar header */}

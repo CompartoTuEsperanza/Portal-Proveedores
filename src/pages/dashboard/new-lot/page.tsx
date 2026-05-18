@@ -167,13 +167,13 @@ export default function NewLot() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-semibold text-rose-950">Nuevo Lote</h2>
+        <h2 className="text-xl font-semibold text-white">Nuevo Lote</h2>
         <p className="text-sm text-rose-800/60 mt-1">
           Registre un nuevo lote de Cacao Chuncho para envío
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="bg-white rounded-lg border border-rose-100/60 p-5 md:p-6 space-y-5">
+      <form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-md rounded-lg border border-rose-100/60 p-5 md:p-6 space-y-5">
         {error && (
           <div className="bg-red-50 border border-red-200 rounded-md p-3 flex items-start gap-2">
             <i className="ri-error-warning-line text-red-500 mt-0.5 flex-shrink-0" />
@@ -191,31 +191,31 @@ export default function NewLot() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {/* Product Type */}
           <div>
-            <label className="block text-sm font-medium text-rose-900/80 mb-1.5">Tipo de Producto</label>
+            <label className="block text-sm font-medium text-rose-200 mb-1.5">Tipo de Producto</label>
             <input
               type="text"
               value={form.product_type}
               onChange={(e) => handleChange("product_type", e.target.value)}
               placeholder="Cacao Chuncho"
-              className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 placeholder:text-rose-700/50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-3 rounded-md border border-rose-300/40 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
             />
           </div>
 
           {/* Region */}
           <div>
-            <label className="block text-sm font-medium text-rose-900/80 mb-1.5">Región</label>
+            <label className="block text-sm font-medium text-rose-200 mb-1.5">Región</label>
             <input
               type="text"
               value={form.region}
               onChange={(e) => handleChange("region", e.target.value)}
               placeholder="Echarati, Quillabamba"
-              className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 placeholder:text-rose-700/50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-3 rounded-md border border-rose-300/40 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
             />
           </div>
 
           {/* Gross Weight */}
           <div>
-            <label className="block text-sm font-medium text-rose-900/80 mb-1.5">Peso Bruto (KG)</label>
+            <label className="block text-sm font-medium text-rose-200 mb-1.5">Peso Bruto (KG)</label>
             <input
               type="number"
               step="0.1"
@@ -223,18 +223,18 @@ export default function NewLot() {
               value={form.gross_weight}
               onChange={(e) => handleChange("gross_weight", e.target.value)}
               placeholder="0.0"
-              className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 placeholder:text-rose-700/50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-3 rounded-md border border-rose-300/40 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
             />
           </div>
 
           {/* Harvest Date */}
           <div>
-            <label className="block text-sm font-medium text-rose-900/80 mb-1.5">Fecha de Cosecha</label>
+            <label className="block text-sm font-medium text-rose-200 mb-1.5">Fecha de Cosecha</label>
             <input
               type="date"
               value={form.harvest_date}
               onChange={(e) => handleChange("harvest_date", e.target.value)}
-              className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-3 rounded-md border border-rose-300/40 text-sm text-white focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
             />
           </div>
 
@@ -242,8 +242,8 @@ export default function NewLot() {
 
           {/* Packaging */}
           <div>
-            <label className="block text-sm font-medium text-rose-900/80 mb-1.5">Empaque</label>
-            <div className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 bg-rose-50/40">
+            <label className="block text-sm font-medium text-rose-200 mb-1.5">Empaque</label>
+            <div className="w-full px-4 py-3 rounded-md border border-rose-300/40 text-sm text-white bg-rose-900/20/40">
               Sacos de yute
             </div>
           </div>

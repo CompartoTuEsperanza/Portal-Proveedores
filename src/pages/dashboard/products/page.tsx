@@ -1,65 +1,182 @@
+import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
-import { products } from "@/mocks/suppliers";
 
-export default function Products() {
+export default function Profile() {
   const { user } = useAuth();
-  const myProducts = products.filter((p) => p.supplier_id === user?.supplier_id);
+  const [currentPassword, setCurrentPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmNewPassword, setConfirmNewPassword] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  function statusBadge(status: string) {
-    const map: Record<string, { bg: string; text: string; label: string }> = {
-      activo: { bg: "bg-emerald-50", text: "text-emerald-700", label: "Activo" },
-      pendiente: { bg: "bg-white", text: "text-rose-700", label: "Pendiente" },
-      inactivo: { bg: "bg-red-50", text: "text-red-700", label: "Inactivo" },
-    };
-    const s = map[status] || { bg: "bg-white/40", text: "text-rose-900", label: status };
-    return (
-      <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium ${s.bg} ${s.text}`}>
-        {s.label}
-      </span>
+  const STORAGE_KEY = "supplier_auth_users_v2";
+
+  function getStoredUsers() {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    return stored ? JSON.parse(stored) : [];
+  }
+
+  function handlePasswordChange(e: React.FormEvent) {
+    e.preventDefault();
+    setError("");
+    setSuccess("");
+
+    if (!currentPassword || !newPassword || !confirmNewPassword) {
+      setError("Todos los campos son obligatorios.");
+      return;
+    }
+
+    if (newPassword.length < 6) {
+      setError("La nueva contraseña debe tener al menos 6 caracteres.");
+      return;
+    }
+
+    if (newPassword !== confirmNewPassword) {
+      setError("Las contraseñas nuevas no coinciden.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const users = getStoredUsers();
+    const found = users.find((u: { supplier_id: string; password: string }) => u.supplier_id === user?.supplier_id);
+
+    if (!found || found.password !== currentPassword) {
+      setError("La contraseña actual es incorrecta.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    const updated = users.map((u: { supplier_id: string }) =>
+      u.supplier_id === user?.supplier_id ? { ...u, password: newPassword } : u,
     );
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+
+    setSuccess("Contraseña actualizada exitosamente.");
+    setCurrentPassword("");
+    setNewPassword("");
+    setConfirmNewPassword("");
+    setIsSubmitting(false);
   }
 
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-semibold text-rose-950">Mis Productos</h2>
+        <h2 className="text-xl font-semibold text-rose-950">Configuración de Perfil</h2>
         <p className="text-sm text-rose-800/60 mt-1">
-          Productos registrados bajo su código de proveedor
+          Administre su información de acceso
         </p>
       </div>
 
-      <div className="bg-white rounded-lg border border-rose-100/60 overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="bg-white/50 border-b border-rose-100/60">
-                <th className="text-left py-3 px-4 text-rose-900/70 font-semibold">ID</th>
-                <th className="text-left py-3 px-4 text-rose-900/70 font-semibold">Nombre</th>
-                <th className="text-left py-3 px-4 text-rose-900/70 font-semibold">Categoría</th>
-                <th className="text-left py-3 px-4 text-rose-900/70 font-semibold">Estado</th>
-              </tr>
-            </thead>
-            <tbody>
-              {myProducts.map((product) => (
-                <tr key={product.id} className="border-b border-rose-50/60 hover:bg-white/40 transition-colors">
-                  <td className="py-3 px-4 font-mono text-xs text-rose-800/60">{product.id}</td>
-                  <td className="py-3 px-4 font-medium text-rose-950">{product.name}</td>
-                  <td className="py-3 px-4">
-                    <span className="text-xs font-medium px-2 py-1 bg-rose-50/50 rounded-full text-rose-950 capitalize">
-                      {product.category}
-                    </span>
-                  </td>
-                  <td className="py-3 px-4">{statusBadge(product.status)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        {myProducts.length === 0 && (
-          <div className="text-center py-10 text-rose-700/40 text-sm">
-            No tiene productos registrados
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Supplier Info Card */}
+        <div className="bg-white/10 backdrop-blur-md rounded-lg border border-rose-100/60 p-5 space-y-5">
+          <h3 className="text-base font-semibold text-rose-950">Información del Proveedor</h3>
+
+          <div className="space-y-4">
+            <div>
+              <label className="block text-xs font-medium text-rose-800/60 uppercase tracking-wide mb-1.5">
+                Código de Proveedor
+              </label>
+              <div className="flex items-center gap-2 px-4 py-3 bg-white/50 rounded-md border border-rose-100/60">
+                <i className="ri-shield-keyhole-line text-rose-700/40" />
+                <span className="text-sm font-mono font-semibold text-rose-950">{user?.supplier_id}</span>
+                <span className="ml-auto text-xs text-rose-800/60 bg-rose-900/20/50 px-2 py-0.5 rounded-full">
+                  Solo lectura
+                </span>
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-rose-800/60 uppercase tracking-wide mb-1.5">
+                Nombre
+              </label>
+              <div className="flex items-center gap-2 px-4 py-3 bg-white/50 rounded-md border border-rose-100/60">
+                <i className="ri-user-line text-rose-700/40" />
+                <span className="text-sm font-medium text-rose-950">{user?.name}</span>
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-rose-800/60 uppercase tracking-wide mb-1.5">
+                Categoría
+              </label>
+              <div className="flex items-center gap-2 px-4 py-3 bg-white/50 rounded-md border border-rose-100/60">
+                <i className="ri-folder-line text-rose-700/40" />
+                <span className="text-sm font-medium text-rose-950 capitalize">{user?.category}</span>
+              </div>
+            </div>
           </div>
-        )}
+        </div>
+
+        {/* Change Password Card */}
+        <div className="bg-white/10 backdrop-blur-md rounded-lg border border-rose-100/60 p-5 space-y-5">
+          <h3 className="text-base font-semibold text-rose-950">Cambiar Contraseña</h3>
+
+          {error && (
+            <div className="bg-red-50 border border-red-200 rounded-md p-3 flex items-start gap-2">
+              <i className="ri-error-warning-line text-red-500 mt-0.5 flex-shrink-0" />
+              <p className="text-xs text-red-700">{error}</p>
+            </div>
+          )}
+
+          {success && (
+            <div className="bg-emerald-50 border border-emerald-200 rounded-md p-3 flex items-start gap-2">
+              <i className="ri-check-line text-emerald-600 mt-0.5 flex-shrink-0" />
+              <p className="text-xs text-emerald-700">{success}</p>
+            </div>
+          )}
+
+          <form onSubmit={handlePasswordChange} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-rose-900/80 mb-1.5">
+                Contraseña Actual
+              </label>
+              <input
+                type="password"
+                value={currentPassword}
+                onChange={(e) => setCurrentPassword(e.target.value)}
+                placeholder="Ingrese su contraseña actual"
+                className="w-full px-4 py-3 rounded-md border border-rose-300/40 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-rose-900/80 mb-1.5">
+                Nueva Contraseña
+              </label>
+              <input
+                type="password"
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+                placeholder="Mínimo 6 caracteres"
+                className="w-full px-4 py-3 rounded-md border border-rose-300/40 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-rose-900/80 mb-1.5">
+                Confirmar Nueva Contraseña
+              </label>
+              <input
+                type="password"
+                value={confirmNewPassword}
+                onChange={(e) => setConfirmNewPassword(e.target.value)}
+                placeholder="Repita la nueva contraseña"
+                className="w-full px-4 py-3 rounded-md border border-rose-300/40 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-rose-800 text-white py-3 rounded-md text-sm font-medium hover:bg-rose-900 transition-colors disabled:opacity-50 cursor-pointer whitespace-nowrap"
+            >
+              {isSubmitting ? "Actualizando..." : "Actualizar Contraseña"}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

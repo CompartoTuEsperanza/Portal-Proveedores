@@ -42,22 +42,22 @@ export default function Payments() {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="bg-white rounded-lg border border-rose-100/60 p-5">
+        <div className="bg-white/10 backdrop-blur-md rounded-lg border border-rose-100/60 p-5">
           <p className="text-sm text-rose-900/70">Total Pagado</p>
           <p className="text-2xl font-bold text-emerald-700 mt-1">${totalPaid.toLocaleString()}</p>
         </div>
-        <div className="bg-white rounded-lg border border-rose-100/60 p-5">
+        <div className="bg-white/10 backdrop-blur-md rounded-lg border border-rose-100/60 p-5">
           <p className="text-sm text-rose-900/70">Enviados</p>
           <p className="text-2xl font-bold text-rose-700 mt-1">${totalSent.toLocaleString()}</p>
         </div>
-        <div className="bg-white rounded-lg border border-rose-100/60 p-5">
+        <div className="bg-white/10 backdrop-blur-md rounded-lg border border-rose-100/60 p-5">
           <p className="text-sm text-rose-900/70">Pendientes</p>
           <p className="text-2xl font-bold text-red-700 mt-1">${totalPending.toLocaleString()}</p>
         </div>
       </div>
 
       {/* Payments Table */}
-      <div className="bg-white rounded-lg border border-rose-100/60 overflow-hidden">
+      <div className="bg-white/10 backdrop-blur-md rounded-lg border border-rose-100/60 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
