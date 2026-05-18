@@ -63,56 +63,56 @@ export default function Profile() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-semibold text-rose-950">Configuración de Perfil</h2>
-        <p className="text-sm text-rose-800/60 mt-1">
+        <h2 className="text-xl font-semibold text-rose-50">Configuración de Perfil</h2>
+        <p className="text-sm text-rose-200/70 mt-1">
           Administre su información de acceso
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Supplier Info Card */}
-        <div className="bg-white rounded-lg border border-rose-100/60 p-5 space-y-5">
-          <h3 className="text-base font-semibold text-rose-950">Información del Proveedor</h3>
+        <div className="bg-white rounded-lg border border-rose-300/40 p-5 space-y-5">
+          <h3 className="text-base font-semibold text-rose-50">Información del Proveedor</h3>
 
           <div className="space-y-4">
             <div>
-              <label className="block text-xs font-medium text-rose-800/60 uppercase tracking-wide mb-1.5">
+              <label className="block text-xs font-medium text-rose-200/70 uppercase tracking-wide mb-1.5">
                 Código de Proveedor
               </label>
-              <div className="flex items-center gap-2 px-4 py-3 bg-white/50 rounded-md border border-rose-100/60">
-                <i className="ri-shield-keyhole-line text-rose-700/40" />
-                <span className="text-sm font-mono font-semibold text-rose-950">{user?.supplier_id}</span>
-                <span className="ml-auto text-xs text-rose-800/60 bg-rose-50/50 px-2 py-0.5 rounded-full">
+              <div className="flex items-center gap-2 px-4 py-3 bg-black/450 rounded-md border border-rose-300/40">
+                <i className="ri-shield-keyhole-line text-rose-200/40" />
+                <span className="text-sm font-mono font-semibold text-rose-50">{user?.supplier_id}</span>
+                <span className="ml-auto text-xs text-rose-200/70 bg-rose-50/50 px-2 py-0.5 rounded-full">
                   Solo lectura
                 </span>
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-rose-800/60 uppercase tracking-wide mb-1.5">
+              <label className="block text-xs font-medium text-rose-200/70 uppercase tracking-wide mb-1.5">
                 Nombre
               </label>
-              <div className="flex items-center gap-2 px-4 py-3 bg-white/50 rounded-md border border-rose-100/60">
-                <i className="ri-user-line text-rose-700/40" />
-                <span className="text-sm font-medium text-rose-950">{user?.name}</span>
+              <div className="flex items-center gap-2 px-4 py-3 bg-black/450 rounded-md border border-rose-300/40">
+                <i className="ri-user-line text-rose-200/40" />
+                <span className="text-sm font-medium text-rose-50">{user?.name}</span>
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-rose-800/60 uppercase tracking-wide mb-1.5">
+              <label className="block text-xs font-medium text-rose-200/70 uppercase tracking-wide mb-1.5">
                 Categoría
               </label>
-              <div className="flex items-center gap-2 px-4 py-3 bg-white/50 rounded-md border border-rose-100/60">
-                <i className="ri-folder-line text-rose-700/40" />
-                <span className="text-sm font-medium text-rose-950 capitalize">{user?.category}</span>
+              <div className="flex items-center gap-2 px-4 py-3 bg-black/450 rounded-md border border-rose-300/40">
+                <i className="ri-folder-line text-rose-200/40" />
+                <span className="text-sm font-medium text-rose-50 capitalize">{user?.category}</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Change Password Card */}
-        <div className="bg-white rounded-lg border border-rose-100/60 p-5 space-y-5">
-          <h3 className="text-base font-semibold text-rose-950">Cambiar Contraseña</h3>
+        <div className="bg-white rounded-lg border border-rose-300/40 p-5 space-y-5">
+          <h3 className="text-base font-semibold text-rose-50">Cambiar Contraseña</h3>
 
           {error && (
             <div className="bg-red-50 border border-red-200 rounded-md p-3 flex items-start gap-2">
@@ -130,7 +130,7 @@ export default function Profile() {
 
           <form onSubmit={handlePasswordChange} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-rose-900/80 mb-1.5">
+              <label className="block text-sm font-medium text-rose-100/80 mb-1.5">
                 Contraseña Actual
               </label>
               <input
@@ -138,12 +138,12 @@ export default function Profile() {
                 value={currentPassword}
                 onChange={(e) => setCurrentPassword(e.target.value)}
                 placeholder="Ingrese su contraseña actual"
-                className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 placeholder:text-rose-700/50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 rounded-md border border-rose-300/50/70 text-sm text-rose-50 placeholder:text-rose-200/50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-rose-900/80 mb-1.5">
+              <label className="block text-sm font-medium text-rose-100/80 mb-1.5">
                 Nueva Contraseña
               </label>
               <input
@@ -151,12 +151,12 @@ export default function Profile() {
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
                 placeholder="Mínimo 6 caracteres"
-                className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 placeholder:text-rose-700/50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 rounded-md border border-rose-300/50/70 text-sm text-rose-50 placeholder:text-rose-200/50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-rose-900/80 mb-1.5">
+              <label className="block text-sm font-medium text-rose-100/80 mb-1.5">
                 Confirmar Nueva Contraseña
               </label>
               <input
@@ -164,7 +164,7 @@ export default function Profile() {
                 value={confirmNewPassword}
                 onChange={(e) => setConfirmNewPassword(e.target.value)}
                 placeholder="Repita la nueva contraseña"
-                className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 placeholder:text-rose-700/50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 rounded-md border border-rose-300/50/70 text-sm text-rose-50 placeholder:text-rose-200/50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
               />
             </div>
 

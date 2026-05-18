@@ -48,9 +48,36 @@ export default function Home() {
             alt="Logo Portal de Proveedores"
             className="h-10 w-auto"
           />
-          <span className="text-white font-sans font-medium text-xs tracking-wide hidden sm:block">
-            Portal de Proveedores
-          </span>
+          <div className="hidden sm:flex flex-col items-start">
+            <span
+              className="uppercase leading-none"
+              style={{
+                color: '#5C1422',
+                fontFamily: "'Playfair Display', serif",
+                fontWeight: 950,
+                fontSize: '0.85rem',
+                letterSpacing: '0.05em',
+                WebkitTextStroke: '0.3px #5C1422',
+                filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.85)) drop-shadow(0 0 14px rgba(255,255,255,0.45))',
+              }}
+            >
+              Portal Miembros de la Familia
+            </span>
+            <span
+              className="leading-none mt-0.5"
+              style={{
+                color: '#5C1422',
+                fontFamily: "'Playfair Display', serif",
+                fontWeight: 800,
+                fontSize: '0.65rem',
+                letterSpacing: '0.05em',
+                WebkitTextStroke: '0.25px #5C1422',
+                filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.7))',
+              }}
+            >
+              Comparto tu Esperanza
+            </span>
+          </div>
         </div>
       </nav>
 

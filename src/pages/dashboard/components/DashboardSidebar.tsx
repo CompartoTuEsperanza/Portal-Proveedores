@@ -31,7 +31,19 @@ export default function DashboardSidebar() {
             alt="Logo"
             className="h-7 w-auto"
           />
-          <span className="text-sm font-medium text-rose-900">Portal</span>
+          <span
+            className="leading-none"
+            style={{
+              color: '#5C1422',
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 900,
+              fontSize: '0.75rem',
+              letterSpacing: '0.03em',
+              filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.8))',
+            }}
+          >
+            Portal Familia
+          </span>
         </div>
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -51,9 +63,34 @@ export default function DashboardSidebar() {
               alt="Logo"
               className="h-8 w-auto"
             />
-            <div>
-              <span className="text-sm font-semibold text-rose-950 block">Portal Proveedores</span>
-              <span className="text-xs text-rose-800/60 capitalize">{user?.category || "Proveedor"}</span>
+            <div className="flex flex-col">
+              <span
+                className="leading-none uppercase"
+                style={{
+                  color: '#5C1422',
+                  fontFamily: "'Playfair Display', serif",
+                  fontWeight: 900,
+                  fontSize: '0.78rem',
+                  letterSpacing: '0.04em',
+                  WebkitTextStroke: '0.25px #5C1422',
+                  filter: 'drop-shadow(0 0 7px rgba(255,255,255,0.85))',
+                }}
+              >
+                Portal Miembros
+              </span>
+              <span
+                className="leading-none mt-0.5"
+                style={{
+                  color: '#5C1422',
+                  fontFamily: "'Playfair Display', serif",
+                  fontWeight: 700,
+                  fontSize: '0.65rem',
+                  letterSpacing: '0.03em',
+                  filter: 'drop-shadow(0 0 5px rgba(255,255,255,0.65))',
+                }}
+              >
+                Comparto tu Esperanza
+              </span>
             </div>
           </div>
         </div>
@@ -110,7 +147,19 @@ export default function DashboardSidebar() {
                   alt="Logo"
                   className="h-7 w-auto"
                 />
-                <span className="text-sm font-medium text-rose-900">Portal</span>
+                <span
+            className="leading-none"
+            style={{
+              color: '#5C1422',
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 900,
+              fontSize: '0.75rem',
+              letterSpacing: '0.03em',
+              filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.8))',
+            }}
+          >
+            Portal Familia
+          </span>
               </div>
               <button onClick={() => setMobileOpen(false)} className="p-1 cursor-pointer">
                 <i className="ri-close-line text-lg text-rose-700" />

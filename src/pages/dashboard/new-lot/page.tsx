@@ -38,8 +38,8 @@ export default function NewLot() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [form, setForm] = useState({
-    product_type: "",
-    region: "",
+    product_type: "Cacao Chuncho",
+    region: "Echarati, La Convención",
     gross_weight: "",
     process: "",
     process_other: "",
@@ -148,8 +148,8 @@ export default function NewLot() {
 
     // Reset form
     setForm({
-      product_type: "",
-      region: "",
+      product_type: "Cacao Chuncho",
+      region: "Echarati, La Convención",
       gross_weight: "",
       process: "",
       process_other: "",
@@ -168,12 +168,12 @@ export default function NewLot() {
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold text-white">Nuevo Lote</h2>
-        <p className="text-sm text-rose-800/60 mt-1">
+        <p className="text-sm text-rose-200/70 mt-1">
           Registre un nuevo lote de Cacao Chuncho para envío
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-md rounded-lg border border-rose-100/60 p-5 md:p-6 space-y-5">
+      <form onSubmit={handleSubmit} className="bg-black/50 backdrop-blur-md rounded-lg border border-rose-300/40 p-5 md:p-6 space-y-5">
         {error && (
           <div className="bg-red-50 border border-red-200 rounded-md p-3 flex items-start gap-2">
             <i className="ri-error-warning-line text-red-500 mt-0.5 flex-shrink-0" />
@@ -189,28 +189,22 @@ export default function NewLot() {
         )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {/* Product Type */}
+          {/* Product Type — fijo */}
           <div>
             <label className="block text-sm font-medium text-rose-200 mb-1.5">Tipo de Producto</label>
-            <input
-              type="text"
-              value={form.product_type}
-              onChange={(e) => handleChange("product_type", e.target.value)}
-              placeholder="Cacao Chuncho"
-              className="w-full px-4 py-3 rounded-md border border-rose-300/40 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
-            />
+            <div className="w-full px-4 py-3 rounded-md border border-rose-300/40 bg-black/35 text-sm text-white font-medium flex items-center gap-2 select-none">
+              <i className="ri-leaf-line text-rose-300" />
+              Cacao Chuncho
+            </div>
           </div>
 
-          {/* Region */}
+          {/* Region — fijo */}
           <div>
             <label className="block text-sm font-medium text-rose-200 mb-1.5">Región</label>
-            <input
-              type="text"
-              value={form.region}
-              onChange={(e) => handleChange("region", e.target.value)}
-              placeholder="Echarati, Quillabamba"
-              className="w-full px-4 py-3 rounded-md border border-rose-300/40 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
-            />
+            <div className="w-full px-4 py-3 rounded-md border border-rose-300/40 bg-black/35 text-sm text-white font-medium flex items-center gap-2 select-none">
+              <i className="ri-map-pin-line text-rose-300" />
+              Echarati, La Convención
+            </div>
           </div>
 
           {/* Gross Weight */}
@@ -251,8 +245,8 @@ export default function NewLot() {
 
         {/* Photos */}
         <div>
-          <label className="block text-sm font-medium text-rose-900/80 mb-2">
-            Fotos del Lote <span className="text-rose-700/50 font-normal">(máx. 10)</span>
+          <label className="block text-sm font-medium text-rose-100/80 mb-2">
+            Fotos del Lote <span className="text-rose-200/50 font-normal">(máx. 10)</span>
           </label>
           <input
             ref={fileInputRef}
@@ -265,7 +259,7 @@ export default function NewLot() {
 
           <div className="flex flex-wrap gap-3">
             {photos.map((photo, idx) => (
-              <div key={idx} className="relative w-24 h-24 rounded-md overflow-hidden border border-rose-100/60 group">
+              <div key={idx} className="relative w-24 h-24 rounded-md overflow-hidden border border-rose-300/40 group">
                 <img src={photo} alt={`Foto ${idx + 1}`} className="w-full h-full object-cover" />
                 <button
                   type="button"
@@ -280,14 +274,14 @@ export default function NewLot() {
               <button
                 type="button"
                 onClick={handlePhotoUpload}
-                className="w-24 h-24 rounded-md border-2 border-dashed border-rose-200/70 flex flex-col items-center justify-center text-rose-700/50 hover:border-rose-600 hover:text-rose-900 transition-all cursor-pointer"
+                className="w-24 h-24 rounded-md border-2 border-dashed border-rose-300/50/70 flex flex-col items-center justify-center text-rose-200/50 hover:border-rose-600 hover:text-rose-100 transition-all cursor-pointer"
               >
                 <i className="ri-camera-line text-xl" />
                 <span className="text-xs mt-1">Agregar</span>
               </button>
             )}
           </div>
-          <p className="text-xs text-rose-700/50 mt-1">{photos.length} / 10 fotos</p>
+          <p className="text-xs text-rose-200/50 mt-1">{photos.length} / 10 fotos</p>
         </div>
 
         {/* Submit */}
@@ -302,7 +296,7 @@ export default function NewLot() {
           <button
             type="button"
             onClick={() => navigate("/dashboard/my-lots")}
-            className="px-6 py-2.5 rounded-md text-sm font-medium text-rose-900/70 border border-rose-200/70 hover:bg-white/40 transition-colors cursor-pointer whitespace-nowrap"
+            className="px-6 py-2.5 rounded-md text-sm font-medium text-rose-100/80 border border-rose-300/50/70 hover:bg-black/55 transition-colors cursor-pointer whitespace-nowrap"
           >
             Cancelar
           </button>

@@ -43,11 +43,10 @@ export default function DashboardLayout() {
           backgroundImage: `url('${basePath}images/hero2.jpeg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundAttachment: "fixed",
         }}
       >
-        {/* Overlay suave para legibilidad */}
-        <div className="absolute inset-0 bg-black/20" />
+        {/* Overlay para legibilidad */}
+        <div className="absolute inset-0 bg-black/35" />
       </div>
 
       {/* Sidebar */}
@@ -58,7 +57,7 @@ export default function DashboardLayout() {
       {/* Main Content */}
       <div className="relative z-10 flex-1 flex flex-col min-h-screen">
         <DashboardHeader />
-        <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-auto">
+        <main className="flex-1 pt-20 lg:pt-0 p-4 md:p-6 lg:p-8 overflow-auto">
           <PageTransition>
             <Outlet />
           </PageTransition>

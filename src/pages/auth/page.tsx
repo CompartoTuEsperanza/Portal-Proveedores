@@ -121,7 +121,36 @@ export default function Auth() {
           alt="Logo Portal de Proveedores"
           className="h-14 w-auto"
         />
-        <span className="text-rose-100 font-sans font-bold text-lg tracking-wide">Portal de Proveedores</span>
+        <div className="flex flex-col items-start">
+          <span
+            className="font-serif uppercase leading-none"
+            style={{
+              color: '#5C1422',
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 950,
+              fontSize: '1.1rem',
+              letterSpacing: '0.05em',
+              WebkitTextStroke: '0.3px #5C1422',
+              filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.85)) drop-shadow(0 0 18px rgba(255,255,255,0.45))',
+            }}
+          >
+            Portal Miembros de la Familia
+          </span>
+          <span
+            className="leading-none mt-1"
+            style={{
+              color: '#5C1422',
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 800,
+              fontSize: '0.85rem',
+              letterSpacing: '0.04em',
+              WebkitTextStroke: '0.3px #5C1422',
+              filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.7))',
+            }}
+          >
+            Comparto tu Esperanza
+          </span>
+        </div>
       </div>
 
       {/* Auth Card */}
