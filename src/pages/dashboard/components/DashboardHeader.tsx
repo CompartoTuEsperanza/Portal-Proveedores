@@ -18,15 +18,15 @@ export default function DashboardHeader() {
   });
 
   return (
-    <header className="hidden lg:flex items-center justify-between bg-white/80 backdrop-blur-sm border-b border-rose-300/30 px-6 py-3 animate-card-stagger stagger-1">
+    <header className="hidden lg:flex items-center justify-between bg-white/92 backdrop-blur-sm border-b border-rose-100/40 px-6 py-3 animate-card-stagger stagger-1">
       {/* Left: Welcome + Date */}
       <div className="flex items-center gap-4">
         <div className="flex flex-col">
-          <h1 className="text-sm font-medium text-rose-200/80 leading-tight">
+          <h1 className="text-sm font-medium text-rose-900/80 leading-tight">
             Bienvenido,{" "}
-            <span className="text-rose-50 font-semibold">{user?.name}</span>
+            <span className="text-rose-950 font-semibold">{user?.name}</span>
           </h1>
-          <p className="text-[11px] text-rose-200/50 mt-0.5 capitalize">{today}</p>
+          <p className="text-[11px] text-rose-700/50 mt-0.5 capitalize">{today}</p>
         </div>
         <span className="h-8 w-px bg-rose-100/60" />
         <div className="flex items-center gap-2">
@@ -41,21 +41,21 @@ export default function DashboardHeader() {
       {/* Right: Supplier info + Avatar + Logout */}
       <div className="flex items-center gap-4">
         <div className="text-right hidden xl:block">
-          <p className="text-xs text-rose-200/70">
-            Código: <span className="font-mono font-medium text-rose-50">{user?.supplier_id}</span>
+          <p className="text-xs text-rose-800/60">
+            Código: <span className="font-mono font-medium text-rose-950">{user?.supplier_id}</span>
           </p>
-          <p className="text-xs text-rose-200/70 capitalize">
-            Categoría: <span className="font-medium text-rose-50">{user?.category}</span>
+          <p className="text-xs text-rose-800/60 capitalize">
+            Categoría: <span className="font-medium text-rose-950">{user?.category}</span>
           </p>
         </div>
 
-        <div className="h-9 w-9 rounded-full bg-gradient-to-br from-rose-100 to-rose-200 flex items-center justify-center text-sm font-bold text-rose-100 shadow-sm border border-rose-300/40">
+        <div className="h-9 w-9 rounded-full bg-gradient-to-br from-rose-100 to-rose-200 flex items-center justify-center text-sm font-bold text-rose-900 shadow-sm border border-rose-100/60">
           {user?.name?.charAt(0) || "P"}
         </div>
 
         <button
           onClick={handleLogout}
-          className="flex items-center gap-2 px-3 py-2 text-sm text-rose-100/80 hover:text-red-700 hover:bg-red-50 rounded-md transition-all duration-200 cursor-pointer whitespace-nowrap hover:-translate-y-0.5 hover:shadow-sm active:scale-95"
+          className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-rose-900 hover:text-red-700 hover:bg-red-50 rounded-md transition-all duration-200 cursor-pointer whitespace-nowrap hover:-translate-y-0.5 hover:shadow-sm active:scale-95"
         >
           <span className="w-4 h-4 flex items-center justify-center">
             <i className="ri-logout-box-r-line" />

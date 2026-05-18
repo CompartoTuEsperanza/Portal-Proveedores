@@ -384,10 +384,6 @@ export default function Auth() {
         </div>
       </div>
 
-      {/* Help text */}],
-      <p className="relative z-10 mt-6 text-xs text-rose-100/50 text-center max-w-sm font-sans">
-        Códigos de prueba: SUP-001 (café, sin contraseña), SUP-002 (cacao, sin contraseña), SUP-003 (café, contraseña: demo123)
-      </p>
     </div>
   );
 }

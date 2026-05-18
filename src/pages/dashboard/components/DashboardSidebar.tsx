@@ -24,7 +24,7 @@ export default function DashboardSidebar() {
   return (
     <>
       {/* Mobile hamburger */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-black/30 backdrop-blur-md border-b border-rose-100/60 px-4 py-3 flex items-center justify-between">
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-black/55 backdrop-blur-md border-b border-rose-300/40 px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img
             src="https://public.readdy.ai/ai/img_res/c99949a7-105a-4e7e-b54f-999d11a6f167.png"
@@ -54,9 +54,9 @@ export default function DashboardSidebar() {
       </div>
 
       {/* Sidebar - Desktop */}
-      <aside className="hidden lg:flex w-64 flex-shrink-0 flex-col bg-black/25 backdrop-blur-md border-r border-rose-100/40 min-h-screen">
+      <aside className="hidden lg:flex w-64 flex-shrink-0 flex-col bg-black/55 backdrop-blur-md border-r border-rose-300/30 min-h-screen">
         {/* Logo area */}
-        <div className="px-6 py-5 border-b border-rose-100/40">
+        <div className="px-6 py-5 border-b border-rose-300/30">
           <div className="flex items-center gap-3">
             <img
               src="https://public.readdy.ai/ai/img_res/c99949a7-105a-4e7e-b54f-999d11a6f167.png"
@@ -104,7 +104,7 @@ export default function DashboardSidebar() {
               className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-all duration-200 ease-out cursor-pointer group relative overflow-hidden ${
                 isActive(item.path)
                   ? "bg-rose-800 text-white shadow-sm"
-                  : "text-rose-900/70 hover:bg-rose-100/60 hover:text-rose-950 hover:translate-x-1.5 active:scale-[0.98]"
+                  : "text-rose-50 font-semibold hover:bg-rose-900/50 hover:text-white hover:translate-x-1.5 active:scale-[0.98]"
               }`}
             >
               {!isActive(item.path) && (
@@ -119,14 +119,14 @@ export default function DashboardSidebar() {
         </nav>
 
         {/* User info */}
-        <div className="px-4 py-4 border-t border-rose-100/40">
+        <div className="px-4 py-4 border-t border-rose-300/30">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-full bg-rose-100 flex items-center justify-center text-sm font-semibold text-rose-800">
               {user?.name?.charAt(0) || "P"}
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-rose-950 truncate">{user?.name}</p>
-              <p className="text-xs text-rose-800/60 truncate">{user?.supplier_id}</p>
+              <p className="text-sm font-semibold text-rose-50 truncate">{user?.name}</p>
+              <p className="text-xs font-medium text-rose-200/80 truncate">{user?.supplier_id}</p>
             </div>
           </div>
         </div>
@@ -136,11 +136,11 @@ export default function DashboardSidebar() {
       {mobileOpen && (
         <div className="lg:hidden fixed inset-0 z-50 bg-black/50" onClick={() => setMobileOpen(false)}>
           <div
-            className="absolute left-0 top-0 bottom-0 w-72 bg-black/30 backdrop-blur-lg shadow-xl flex flex-col"
+            className="absolute left-0 top-0 bottom-0 w-72 bg-black/65 backdrop-blur-lg shadow-xl flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Mobile sidebar header */}
-            <div className="px-4 py-4 border-b border-rose-100/40 flex items-center justify-between">
+            <div className="px-4 py-4 border-b border-rose-300/30 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <img
                   src="https://public.readdy.ai/ai/img_res/c99949a7-105a-4e7e-b54f-999d11a6f167.png"
@@ -177,7 +177,7 @@ export default function DashboardSidebar() {
                   className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-all duration-200 ease-out cursor-pointer group relative overflow-hidden ${
                     isActive(item.path)
                       ? "bg-rose-800 text-white"
-                      : "text-rose-900/70 hover:bg-rose-100/60 hover:text-rose-950 hover:translate-x-1.5 active:scale-[0.98]"
+                      : "text-rose-50 font-semibold hover:bg-rose-900/50 hover:text-white hover:translate-x-1.5 active:scale-[0.98]"
                   }`}
                 >
                   {!isActive(item.path) && (
@@ -191,14 +191,14 @@ export default function DashboardSidebar() {
               ))}
             </nav>
 
-            <div className="px-4 py-4 border-t border-rose-100/40">
+            <div className="px-4 py-4 border-t border-rose-300/30">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-rose-100 flex items-center justify-center text-sm font-semibold text-rose-800">
                   {user?.name?.charAt(0) || "P"}
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-rose-950">{user?.name}</p>
-                  <p className="text-xs text-rose-800/60">{user?.supplier_id}</p>
+                  <p className="text-sm font-semibold text-rose-50">{user?.name}</p>
+                  <p className="text-xs font-medium text-rose-200/80">{user?.supplier_id}</p>
                 </div>
               </div>
             </div>

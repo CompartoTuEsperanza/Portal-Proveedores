@@ -12,7 +12,7 @@ export default function StatCard({ icon, label, value, color, onClick, index = 0
   return (
     <div
       onClick={onClick}
-      className={`group bg-black/50 backdrop-blur-md rounded-lg border border-rose-300/40 p-5 cursor-pointer transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-md hover:border-rose-300/50 active:scale-[0.98] animate-card-stagger ${staggerClass}`}
+      className={`group bg-white/10 backdrop-blur-md rounded-lg border border-rose-100/60 p-5 cursor-pointer transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-md hover:border-rose-200 active:scale-[0.98] animate-card-stagger ${staggerClass}`}
     >
       <div className="flex items-start justify-between">
         <div>

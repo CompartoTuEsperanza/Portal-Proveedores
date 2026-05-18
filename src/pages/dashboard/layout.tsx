@@ -43,9 +43,9 @@ export default function DashboardLayout() {
           backgroundImage: `url('${basePath}images/hero2.jpeg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-        }}
+                  }}
       >
-        {/* Overlay para legibilidad */}
+        {/* Overlay suave para legibilidad */}
         <div className="absolute inset-0 bg-black/35" />
       </div>
 

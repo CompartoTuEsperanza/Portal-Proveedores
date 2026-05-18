@@ -76,12 +76,12 @@ export default function Profile() {
 
           <div className="space-y-4">
             <div>
-              <label className="block text-xs font-medium text-rose-200/70 uppercase tracking-wide mb-1.5">
+              <label className="block text-xs font-bold text-rose-700 uppercase tracking-wide mb-1.5">
                 Código de Proveedor
               </label>
               <div className="flex items-center gap-2 px-4 py-3 bg-black/450 rounded-md border border-rose-300/40">
-                <i className="ri-shield-keyhole-line text-rose-200/40" />
-                <span className="text-sm font-mono font-semibold text-rose-50">{user?.supplier_id}</span>
+                <i className="ri-shield-keyhole-line text-rose-700/70" />
+                <span className="text-sm font-mono font-bold text-rose-950">{user?.supplier_id}</span>
                 <span className="ml-auto text-xs text-rose-200/70 bg-rose-900/20/50 px-2 py-0.5 rounded-full">
                   Solo lectura
                 </span>
@@ -89,22 +89,22 @@ export default function Profile() {
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-rose-200/70 uppercase tracking-wide mb-1.5">
+              <label className="block text-xs font-bold text-rose-700 uppercase tracking-wide mb-1.5">
                 Nombre
               </label>
               <div className="flex items-center gap-2 px-4 py-3 bg-black/450 rounded-md border border-rose-300/40">
-                <i className="ri-user-line text-rose-200/40" />
-                <span className="text-sm font-medium text-rose-50">{user?.name}</span>
+                <i className="ri-user-line text-rose-700/70" />
+                <span className="text-sm font-bold text-rose-950">{user?.name}</span>
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-rose-200/70 uppercase tracking-wide mb-1.5">
+              <label className="block text-xs font-bold text-rose-700 uppercase tracking-wide mb-1.5">
                 Categoría
               </label>
               <div className="flex items-center gap-2 px-4 py-3 bg-black/450 rounded-md border border-rose-300/40">
-                <i className="ri-folder-line text-rose-200/40" />
-                <span className="text-sm font-medium text-rose-50 capitalize">{user?.category}</span>
+                <i className="ri-folder-line text-rose-700/70" />
+                <span className="text-sm font-bold text-rose-950 capitalize">{user?.category}</span>
               </div>
             </div>
           </div>

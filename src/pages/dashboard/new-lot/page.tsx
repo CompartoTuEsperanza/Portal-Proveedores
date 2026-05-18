@@ -254,7 +254,7 @@ export default function NewLot() {
             accept="image/*"
             multiple
             onChange={onFileChange}
-            className="hidden"
+            className="hidden font-bold"
           />
 
           <div className="flex flex-wrap gap-3">

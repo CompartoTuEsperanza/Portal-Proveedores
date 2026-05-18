@@ -72,39 +72,39 @@ export default function Profile() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Supplier Info Card */}
         <div className="bg-white rounded-lg border border-rose-300/40 p-5 space-y-5">
-          <h3 className="text-base font-semibold text-rose-50">Información del Proveedor</h3>
+          <h3 className="text-base font-bold text-rose-950">Información del Proveedor</h3>
 
           <div className="space-y-4">
             <div>
-              <label className="block text-xs font-medium text-rose-200/70 uppercase tracking-wide mb-1.5">
+              <label className="block text-xs font-bold text-rose-700 uppercase tracking-wide mb-1.5">
                 Código de Proveedor
               </label>
               <div className="flex items-center gap-2 px-4 py-3 bg-black/450 rounded-md border border-rose-300/40">
-                <i className="ri-shield-keyhole-line text-rose-200/40" />
-                <span className="text-sm font-mono font-semibold text-rose-50">{user?.supplier_id}</span>
-                <span className="ml-auto text-xs text-rose-200/70 bg-rose-50/50 px-2 py-0.5 rounded-full">
+                <i className="ri-shield-keyhole-line text-rose-700/70" />
+                <span className="text-sm font-mono font-bold text-rose-950">{user?.supplier_id}</span>
+                <span className="ml-auto text-xs font-semibold text-rose-700 bg-rose-100 px-2 py-0.5 rounded-full">
                   Solo lectura
                 </span>
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-rose-200/70 uppercase tracking-wide mb-1.5">
+              <label className="block text-xs font-bold text-rose-700 uppercase tracking-wide mb-1.5">
                 Nombre
               </label>
               <div className="flex items-center gap-2 px-4 py-3 bg-black/450 rounded-md border border-rose-300/40">
-                <i className="ri-user-line text-rose-200/40" />
-                <span className="text-sm font-medium text-rose-50">{user?.name}</span>
+                <i className="ri-user-line text-rose-700/70" />
+                <span className="text-sm font-bold text-rose-950">{user?.name}</span>
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-rose-200/70 uppercase tracking-wide mb-1.5">
+              <label className="block text-xs font-bold text-rose-700 uppercase tracking-wide mb-1.5">
                 Categoría
               </label>
               <div className="flex items-center gap-2 px-4 py-3 bg-black/450 rounded-md border border-rose-300/40">
-                <i className="ri-folder-line text-rose-200/40" />
-                <span className="text-sm font-medium text-rose-50 capitalize">{user?.category}</span>
+                <i className="ri-folder-line text-rose-700/70" />
+                <span className="text-sm font-bold text-rose-950 capitalize">{user?.category}</span>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function Profile() {
 
         {/* Change Password Card */}
         <div className="bg-white rounded-lg border border-rose-300/40 p-5 space-y-5">
-          <h3 className="text-base font-semibold text-rose-50">Cambiar Contraseña</h3>
+          <h3 className="text-base font-bold text-rose-950">Cambiar Contraseña</h3>
 
           {error && (
             <div className="bg-red-50 border border-red-200 rounded-md p-3 flex items-start gap-2">
