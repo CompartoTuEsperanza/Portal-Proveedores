@@ -117,22 +117,6 @@ export default function NewLot() {
       setError("Ingrese un peso bruto válido en KG.");
       return;
     }
-    if (!form.process) {
-      setError("Seleccione un proceso.");
-      return;
-    }
-    if (form.process === "Otro" && !form.process_other.trim()) {
-      setError("Especifique el proceso en el campo 'Otro'.");
-      return;
-    }
-    if (!form.packaging) {
-      setError("Seleccione un tipo de empaque.");
-      return;
-    }
-    if (form.packaging === "Otro" && !form.packaging_other.trim()) {
-      setError("Especifique el empaque en el campo 'Otro'.");
-      return;
-    }
     if (!form.harvest_date) {
       setError("Seleccione la fecha de cosecha.");
       return;
@@ -140,8 +124,8 @@ export default function NewLot() {
 
     setIsSubmitting(true);
 
-    const processValue = form.process === "Otro" ? form.process_other : form.process;
-    const packagingValue = form.packaging === "Otro" ? form.packaging_other : form.packaging;
+    const processValue = "Artesanal";
+    const packagingValue = "Sacos de yute";
 
     const newLot: Lot = {
       id: `LOT-${Date.now()}`,
@@ -185,7 +169,7 @@ export default function NewLot() {
       <div>
         <h2 className="text-xl font-semibold text-rose-950">Nuevo Lote</h2>
         <p className="text-sm text-rose-800/60 mt-1">
-          Registre un nuevo lote de producto para envío
+          Registre un nuevo lote de Cacao Chuncho para envío
         </p>
       </div>
 
@@ -212,7 +196,7 @@ export default function NewLot() {
               type="text"
               value={form.product_type}
               onChange={(e) => handleChange("product_type", e.target.value)}
-              placeholder="Ej: Café Arábica, Cacao Fino..."
+              placeholder="Cacao Chuncho"
               className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 placeholder:text-rose-700/50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
             />
           </div>
@@ -224,7 +208,7 @@ export default function NewLot() {
               type="text"
               value={form.region}
               onChange={(e) => handleChange("region", e.target.value)}
-              placeholder="Ej: Huila, Colombia"
+              placeholder="Echarati, Quillabamba"
               className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 placeholder:text-rose-700/50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all"
             />
           </div>
@@ -254,52 +238,14 @@ export default function NewLot() {
             />
           </div>
 
-          {/* Process */}
-          <div>
-            <label className="block text-sm font-medium text-rose-900/80 mb-1.5">Proceso</label>
-            <select
-              value={form.process}
-              onChange={(e) => handleChange("process", e.target.value)}
-              className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all bg-white"
-            >
-              <option value="">Seleccione un proceso</option>
-              {processOptions.map((opt) => (
-                <option key={opt} value={opt}>{opt}</option>
-              ))}
-            </select>
-            {form.process === "Otro" && (
-              <input
-                type="text"
-                value={form.process_other}
-                onChange={(e) => handleChange("process_other", e.target.value)}
-                placeholder="Especifique el proceso"
-                className="w-full mt-2 px-4 py-2.5 rounded-md border border-rose-200/70 text-sm text-rose-950 placeholder:text-rose-700/50 focus:outline-none focus:ring-2 focus:ring-rose-500"
-              />
-            )}
-          </div>
+
 
           {/* Packaging */}
           <div>
             <label className="block text-sm font-medium text-rose-900/80 mb-1.5">Empaque</label>
-            <select
-              value={form.packaging}
-              onChange={(e) => handleChange("packaging", e.target.value)}
-              className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent transition-all bg-white"
-            >
-              <option value="">Seleccione un empaque</option>
-              {packagingOptions.map((opt) => (
-                <option key={opt} value={opt}>{opt}</option>
-              ))}
-            </select>
-            {form.packaging === "Otro" && (
-              <input
-                type="text"
-                value={form.packaging_other}
-                onChange={(e) => handleChange("packaging_other", e.target.value)}
-                placeholder="Especifique el empaque"
-                className="w-full mt-2 px-4 py-2.5 rounded-md border border-rose-200/70 text-sm text-rose-950 placeholder:text-rose-700/50 focus:outline-none focus:ring-2 focus:ring-rose-500"
-              />
-            )}
+            <div className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 bg-rose-50/40">
+              Sacos de yute
+            </div>
           </div>
         </div>
 

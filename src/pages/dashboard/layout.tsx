@@ -37,7 +37,7 @@ export default function DashboardLayout() {
       <div
         className="fixed inset-0 z-0"
         style={{
-          backgroundImage: `url('https://readdy.ai/api/search-image?query=Aerial%20view%20of%20Peruvian%20Andes%20mountains%20with%20golden%20terraced%20fields%2C%20warm%20earthy%20tones%2C%20misty%20valleys%2C%20soft%20morning%20light%2C%20cinematic%20landscape%20photography%2C%20rich%20amber%20and%20green%20tones%2C%20serene%20nature%2C%20wide%20panoramic%20view&width=1920&height=1080&seq=dashboard-bg-andes&orientation=landscape')`,
+          backgroundImage: `url('/images/hero2.jpeg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",

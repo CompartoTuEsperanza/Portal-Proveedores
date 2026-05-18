@@ -52,7 +52,7 @@ export const suppliers: Supplier[] = [
   {
     supplier_id: "SUP-001",
     name: "Productores San Juan",
-    category: "café",
+    category: "cacao",
     password: null,
     status: "active",
   },
@@ -66,20 +66,20 @@ export const suppliers: Supplier[] = [
   {
     supplier_id: "SUP-003",
     name: "Finca Las Montañas",
-    category: "café",
+    category: "cacao",
     password: "demo123",
     status: "active",
   },
 ];
 
 export const products: Product[] = [
-  { id: "PRD-001", supplier_id: "SUP-001", name: "Café Arábica Premium", category: "café", status: "activo" },
-  { id: "PRD-002", supplier_id: "SUP-001", name: "Café Robusta Selecto", category: "café", status: "activo" },
-  { id: "PRD-003", supplier_id: "SUP-001", name: "Café Orgánico", category: "café", status: "pendiente" },
+  { id: "PRD-001", supplier_id: "SUP-001", name: "Cacao Chuncho Premium", category: "cacao", status: "activo" },
+  { id: "PRD-002", supplier_id: "SUP-001", name: "Cacao Chuncho Selecto", category: "cacao", status: "activo" },
+  { id: "PRD-003", supplier_id: "SUP-001", name: "Cacao Chuncho Orgánico", category: "cacao", status: "pendiente" },
   { id: "PRD-004", supplier_id: "SUP-002", name: "Cacao Fino de Aroma", category: "cacao", status: "activo" },
   { id: "PRD-005", supplier_id: "SUP-002", name: "Cacao Trinitario", category: "cacao", status: "activo" },
-  { id: "PRD-006", supplier_id: "SUP-003", name: "Café Especial Bourbon", category: "café", status: "activo" },
-  { id: "PRD-007", supplier_id: "SUP-003", name: "Café Geisha", category: "café", status: "activo" },
+  { id: "PRD-006", supplier_id: "SUP-003", name: "Cacao Chuncho Especial", category: "cacao", status: "activo" },
+  { id: "PRD-007", supplier_id: "SUP-003", name: "Cacao Chuncho Nativo", category: "cacao", status: "activo" },
 ];
 
 export const orders: Order[] = [
@@ -96,8 +96,8 @@ export const lots: Lot[] = [
   {
     id: "LOT-001",
     supplier_id: "SUP-001",
-    product_type: "Café Arábica",
-    region: "Huila, Colombia",
+    product_type: "Cacao Chuncho",
+    region: "Echarati, Quillabamba",
     gross_weight: 1250,
     process: "Lavado / Washed",
     packaging: "Sacos de yute",
@@ -109,8 +109,8 @@ export const lots: Lot[] = [
   {
     id: "LOT-002",
     supplier_id: "SUP-001",
-    product_type: "Café Robusta",
-    region: "Nariño, Colombia",
+    product_type: "Cacao Chuncho",
+    region: "Echarati, Quillabamba",
     gross_weight: 800,
     process: "Natural",
     packaging: "Sacos de polipropileno",
@@ -123,7 +123,7 @@ export const lots: Lot[] = [
     id: "LOT-003",
     supplier_id: "SUP-002",
     product_type: "Cacao Fino",
-    region: "Arauca, Colombia",
+    region: "Echarati, Quillabamba",
     gross_weight: 1500,
     process: "Honey",
     packaging: "Cajas de madera",
@@ -135,8 +135,8 @@ export const lots: Lot[] = [
   {
     id: "LOT-004",
     supplier_id: "SUP-003",
-    product_type: "Café Bourbon",
-    region: "Cauca, Colombia",
+    product_type: "Cacao Chuncho",
+    region: "Echarati, Quillabamba",
     gross_weight: 950,
     process: "Lavado / Washed",
     packaging: "Sacos de yute",
@@ -148,8 +148,8 @@ export const lots: Lot[] = [
 ];
 
 export const payments: Payment[] = [
-  { id: "PAY-001", supplier_id: "SUP-001", lot_id: "LOT-001", lot_name: "Café Arábica - Huila", percentage: 100, amount: 12500, bank: "Bancolombia", date: "2026-04-05", status: "pagado" },
-  { id: "PAY-002", supplier_id: "SUP-001", lot_id: "LOT-002", lot_name: "Café Robusta - Nariño", percentage: 50, amount: 5000, bank: "Davivienda", date: "2026-04-15", status: "enviado" },
+  { id: "PAY-001", supplier_id: "SUP-001", lot_id: "LOT-001", lot_name: "Cacao Chuncho - Echarati", percentage: 100, amount: 12500, bank: "Bancolombia", date: "2026-04-05", status: "pagado" },
+  { id: "PAY-002", supplier_id: "SUP-001", lot_id: "LOT-002", lot_name: "Cacao Chuncho - Echarati", percentage: 50, amount: 5000, bank: "Davivienda", date: "2026-04-15", status: "enviado" },
   { id: "PAY-003", supplier_id: "SUP-002", lot_id: "LOT-003", lot_name: "Cacao Fino - Arauca", percentage: 100, amount: 22100, bank: "BBVA", date: "2026-03-25", status: "pagado" },
-  { id: "PAY-004", supplier_id: "SUP-003", lot_id: "LOT-004", lot_name: "Café Bourbon - Cauca", percentage: 30, amount: 3500, bank: "Bancolombia", date: "2026-04-20", status: "pendiente" },
+  { id: "PAY-004", supplier_id: "SUP-003", lot_id: "LOT-004", lot_name: "Cacao Chuncho - Echarati", percentage: 30, amount: 3500, bank: "Bancolombia", date: "2026-04-20", status: "pendiente" },
 ];

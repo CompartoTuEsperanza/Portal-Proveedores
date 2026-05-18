@@ -2,9 +2,16 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="https://static.readdy.ai/image/d9222059ccdf6d28841e3051fa660ad0/87ad7d4be31560b6bf643f578645fc6b.png" />
+    <link rel="icon" type="image/png" href="icons/icon-192.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portal de Proveedores - Acceso Privado</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#7A1D2E" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Portal CTE" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
     <meta name="description" content="Portal exclusivo para proveedores. Gestione sus productos, lotes, órdenes y pagos de manera segura y privada." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,5 +22,12 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').catch(() => {});
+        });
+      }
+    </script>
   </body>
 </html>

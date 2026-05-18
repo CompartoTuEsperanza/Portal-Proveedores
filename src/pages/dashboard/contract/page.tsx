@@ -61,8 +61,8 @@ export default function Contract() {
               <div>
                 <p className="text-sm font-medium text-rose-950">Productos cubiertos</p>
                 <p className="text-xs text-rose-800/60 mt-0.5">
-                  {user?.category === "café"
-                    ? "Café Arábica, Café Robusta, Café Orgánico y especialidades asociadas."
+                  {user?.category === "cacao"
+                    ? "Cacao Chuncho nativo de Echarati, Quillabamba, y especialidades asociadas."
                     : user?.category === "cacao"
                       ? "Cacao Fino de Aroma, Cacao Trinitario y derivados autorizados."
                       : "Productos agrícolas asociados a la categoría registrada."}
