@@ -5,6 +5,9 @@ import DashboardSidebar from "./components/DashboardSidebar";
 import DashboardHeader from "./components/DashboardHeader";
 import PageTransition from "@/components/feature/PageTransition";
 
+declare const __BASE_PATH__: string;
+const basePath = typeof __BASE_PATH__ !== 'undefined' ? __BASE_PATH__ : '/';
+
 export default function DashboardLayout() {
   const { user, isLoading } = useAuth();
   const navigate = useNavigate();
@@ -37,7 +40,7 @@ export default function DashboardLayout() {
       <div
         className="fixed inset-0 z-0"
         style={{
-          backgroundImage: `url('/images/hero2.jpeg')`,
+          backgroundImage: `url('${basePath}images/hero2.jpeg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
