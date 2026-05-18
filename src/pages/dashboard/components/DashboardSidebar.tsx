@@ -42,7 +42,7 @@ export default function DashboardSidebar() {
               filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.8))',
             }}
           >
-            Portal Familia
+            Familia
           </span>
         </div>
         <button
@@ -76,7 +76,7 @@ export default function DashboardSidebar() {
                   filter: 'drop-shadow(0 0 7px rgba(255,255,255,0.85))',
                 }}
               >
-                Portal Miembros
+                Familia
               </span>
               <span
                 className="leading-none mt-0.5"
@@ -158,7 +158,7 @@ export default function DashboardSidebar() {
               filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.8))',
             }}
           >
-            Portal Familia
+            Familia
           </span>
               </div>
               <button onClick={() => setMobileOpen(false)} className="p-1 cursor-pointer">
