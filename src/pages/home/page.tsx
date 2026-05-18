@@ -64,21 +64,27 @@ export default function Home() {
           <div className="animate-fade-in-scale delay-400 mt-12">
             <button
               onClick={() => navigate("/auth")}
-              className="relative inline-flex items-center gap-3 bg-rose-600 text-white px-10 py-4 rounded-md font-sans font-medium text-base hover:bg-rose-500 transition-all duration-300 whitespace-nowrap cursor-pointer overflow-hidden"
-              style={{ animation: "pulse-glow 3s ease-in-out infinite" }}
+              className="relative inline-flex items-center gap-3 text-white px-12 py-4 cursor-pointer overflow-hidden whitespace-nowrap transition-all duration-300 hover:scale-105"
+              style={{
+                borderRadius: '9999px',
+                background: 'linear-gradient(135deg, #4a0d1a 0%, #7A1D2E 40%, #9f1239 60%, #4a0d1a 100%)',
+                boxShadow: '0 0 32px rgba(122,29,46,0.7), 0 0 64px rgba(122,29,46,0.3), inset 0 1px 0 rgba(255,255,255,0.15)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                animation: "pulse-glow 3s ease-in-out infinite",
+              }}
             >
-              <span className="absolute inset-0 pointer-events-none overflow-hidden">
+              <span className="absolute inset-0 pointer-events-none overflow-hidden" style={{ borderRadius: '9999px' }}>
                 <span
                   className="absolute top-0 left-0 w-full h-full"
                   style={{
-                    background: "linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.35) 50%, transparent 70%)",
+                    background: "linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%)",
                     animation: "shine 2.5s ease-in-out infinite",
                     transform: "skewX(-20deg)",
                   }}
                 />
               </span>
-              <span className="relative z-10">Acceder al Portal</span>
-              <i className="ri-arrow-right-line text-lg relative z-10" />
+              <span className="relative z-10 font-serif font-bold tracking-[0.2em] uppercase text-sm" style={{ color: '#f5d0a9' }}>Acceder al Portal</span>
+              <i className="ri-arrow-right-line text-base relative z-10" style={{ color: '#f5d0a9' }} />
             </button>
           </div>
         </div>
