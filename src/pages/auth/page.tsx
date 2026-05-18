@@ -63,7 +63,7 @@ export default function Auth() {
     setSuccess("");
     setIsSubmitting(true);
 
-    const result = await registerNewSupplier(name, category, password, confirmPassword);
+    const result = await registerNewSupplier(name, "", password, confirmPassword);
     if (result.success) {
       setNewSupplierId(result.supplier_id || "");
       setSuccess(result.message);
@@ -109,7 +109,7 @@ export default function Auth() {
             type="video/mp4"
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-rose-950/70 via-rose-900/50 to-stone-900/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-rose-950/35 via-rose-900/20 to-stone-900/40" />
       </div>
 
       {/* Logo */}
