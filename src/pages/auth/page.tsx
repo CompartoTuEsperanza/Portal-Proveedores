@@ -226,29 +226,6 @@ export default function Auth() {
             </div>
           )}
 
-          {/* Categoría - solo nuevo registro */}
-          {mode === "new" && (
-            <div>
-              <label htmlFor="category" className="block text-sm font-medium text-rose-900/80 mb-1.5">
-                Categoría de Producto
-              </label>
-              <select
-                id="category"
-                value={category}
-                onChange={(e) => {
-                  setCategory(e.target.value);
-                  setError("");
-                }}
-                className="w-full px-4 py-3 rounded-md border border-rose-200/70 text-sm text-rose-950 focus:outline-none focus:ring-2 focus:ring-rose-600 focus:border-transparent transition-all bg-white/30"
-                required
-              >
-                <option value="">Seleccione una categoría</option>
-                {categoryOptions.map((opt) => (
-                  <option key={opt.value} value={opt.value}>{opt.label}</option>
-                ))}
-              </select>
-            </div>
-          )}
 
           {/* Contraseña */}
           <div>

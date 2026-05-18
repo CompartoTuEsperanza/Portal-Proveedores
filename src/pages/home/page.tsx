@@ -56,8 +56,8 @@ export default function Home() {
           <p className="animate-fade-in-up text-rose-200 font-sans font-bold text-base sm:text-lg tracking-[0.25em] uppercase mb-4">
             Portal Exclusivo
           </p>
-          <h1 className="animate-fade-in-up delay-200 font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight leading-[1.1]">
-            Bienvenidos Proveedores
+          <h1 className="animate-fade-in-up delay-200 font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]" style={{ color: '#7A1D2E', textShadow: '0 0 40px rgba(255,255,255,0.95), 0 0 80px rgba(255,255,255,0.6), 0 0 8px rgba(255,255,255,0.9)' }}>
+            Bienvenido a esta gran familia
           </h1>
           <p className="animate-fade-in-up delay-300 mt-8 text-lg md:text-xl text-white/75 max-w-lg mx-auto leading-relaxed font-sans font-bold">
             Acceda a su panel privado para gestionar su información de manera segura y exclusiva.
