@@ -26,10 +26,9 @@ export default function Home() {
           playsInline
           preload="auto"
           className="w-full h-full object-cover"
-          poster="https://readdy.ai/api/search-image?query=Stunning%20Peruvian%20Andes%20mountain%20landscape%20at%20golden%20hour%2C%20terraced%20agricultural%20fields%20on%20green%20hillsides%2C%20warm%20amber%20and%20gold%20sunlight%2C%20dramatic%20clouds%2C%20editorial%20photography%20style%2C%20rich%20brown%20and%20golden%20tones%2C%20coffee%20and%20cacao%20growing%20region%2C%20cinematic%20wide%20angle&width=1920&height=1080&seq=hero-bg-2&orientation=landscape"
         >
           <source
-            src="https://videos.pexels.com/video-files/857251/857251-hd_1920_1080_25fps.mp4"
+            src="/videos/fondos3.mp4"
             type="video/mp4"
           />
         </video>
