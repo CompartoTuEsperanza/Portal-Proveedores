@@ -1,16 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import { useRef, useEffect } from "react";
 
+declare const __BASE_PATH__: string;
+
 export default function Home() {
   const navigate = useNavigate();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const basePath = typeof __BASE_PATH__ !== 'undefined' ? __BASE_PATH__ : '/';
+  const videoSrc = `${basePath}videos/fondos3.mp4`.replace('//', '/');
 
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
-      video.play().catch(() => {
-        // Autoplay blocked, muted should handle it
-      });
+      video.play().catch(() => {});
     }
   }, []);
 
@@ -26,12 +28,15 @@ export default function Home() {
           playsInline
           preload="auto"
           className="w-full h-full object-cover"
+          style={{ display: 'block' }}
         >
           <source
-            src="/videos/fondos3.mp4"
+            src={videoSrc}
             type="video/mp4"
           />
         </video>
+        {/* Fallback gradient si el video no carga */}
+        <div className="absolute inset-0 -z-10" style={{ background: 'linear-gradient(135deg, #3f0d17 0%, #7A1D2E 40%, #9f1239 70%, #2d0a10 100%)' }} />
         <div className="absolute inset-0 bg-gradient-to-b from-rose-950/60 via-rose-900/40 to-stone-900/70" />
       </div>
 
@@ -43,7 +48,7 @@ export default function Home() {
             alt="Logo Portal de Proveedores"
             className="h-10 w-auto"
           />
-          <span className="text-white font-sans font-medium text-lg tracking-wide hidden sm:block">
+          <span className="text-white font-sans font-medium text-xs tracking-wide hidden sm:block">
             Portal de Proveedores
           </span>
         </div>
@@ -55,7 +60,7 @@ export default function Home() {
           <p className="animate-fade-in-up text-rose-200 font-sans font-bold text-base sm:text-lg tracking-[0.25em] uppercase mb-4">
             Portal Exclusivo
           </p>
-          <h1 className="animate-fade-in-up delay-200 font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]" style={{ color: '#7A1D2E', textShadow: '0 0 40px rgba(255,255,255,0.95), 0 0 80px rgba(255,255,255,0.6), 0 0 8px rgba(255,255,255,0.9)' }}>
+          <h1 className="animate-fade-in-up delay-200 font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]" style={{ color: '#7A1D2E', textShadow: '0 0 40px rgba(255,255,255,0.95), 0 0 80px rgba(255,255,255,0.6), 0 0 8px rgba(255,255,255,0.9)' }}>
             Bienvenido a esta gran familia
           </h1>
           <p className="animate-fade-in-up delay-300 mt-8 text-lg md:text-xl text-white/75 max-w-lg mx-auto leading-relaxed font-sans font-bold">
