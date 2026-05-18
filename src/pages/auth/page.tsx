@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 
+declare const __BASE_PATH__: string;
+
 type AuthMode = "login" | "register" | "new";
 
 export default function Auth() {
@@ -115,7 +117,7 @@ export default function Auth() {
       {/* Logo */}
       <div className="relative z-10 mb-8 flex flex-col items-center gap-3">
         <img
-          src="https://public.readdy.ai/ai/img_res/c99949a7-105a-4e7e-b54f-999d11a6f167.png"
+          src={`${typeof __BASE_PATH__ !== 'undefined' ? __BASE_PATH__ : '/'}images/hoja.png`}
           alt="Logo Portal de Proveedores"
           className="h-14 w-auto"
         />
