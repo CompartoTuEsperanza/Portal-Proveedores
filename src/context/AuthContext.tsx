@@ -111,9 +111,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (!name.trim()) {
       return { success: false, message: "Ingrese su nombre." };
     }
-    if (!category.trim()) {
-      return { success: false, message: "Seleccione una categoría." };
-    }
     if (password.length < 6) {
       return { success: false, message: "La contraseña debe tener al menos 6 caracteres." };
     }
