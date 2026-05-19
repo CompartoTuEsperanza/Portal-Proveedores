@@ -103,11 +103,8 @@ export default function Home() {
             style={{
               color: '#7A1D2E',
               fontFamily: "'Playfair Display', serif",
-              fontWeight: 900,
+              fontWeight: 950,
               fontStyle: 'italic',
-              fontSize: 'clamp(1.2rem, 2.8vw, 1.9rem)',
-              letterSpacing: '0.04em',
-              textShadow: '0 0 30px rgba(255,255,255,0.9), 0 0 60px rgba(255,255,255,0.5), 0 1px 4px rgba(0,0,0,0.2)',
             }}
           >
             Bienvenido a esta gran familia
