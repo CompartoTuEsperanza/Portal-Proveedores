@@ -84,12 +84,33 @@ export default function Home() {
       {/* Hero Content */}
       <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 text-center">
         <div className="max-w-3xl mx-auto">
-          <p className="animate-fade-in-up text-rose-200 font-sans font-bold text-base sm:text-lg tracking-[0.25em] uppercase mb-4">
-            Portal Exclusivo
-          </p>
-          <h1 className="animate-fade-in-up delay-200 font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]" style={{ color: '#7A1D2E', textShadow: '0 0 40px rgba(255,255,255,0.95), 0 0 80px rgba(255,255,255,0.6), 0 0 8px rgba(255,255,255,0.9)' }}>
-            Bienvenido a esta gran familia
+          <h1
+            className="animate-fade-in-up uppercase tracking-tight leading-[1.05] mb-4"
+            style={{
+              color: '#5C1422',
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 950,
+              fontSize: 'clamp(2.4rem, 6vw, 4.5rem)',
+              letterSpacing: '0.03em',
+              WebkitTextStroke: '0.5px #5C1422',
+              filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.55))',
+            }}
+          >
+            Comparto tu Esperanza
           </h1>
+          <p
+            className="animate-fade-in-up delay-200"
+            style={{
+              color: '#C9A84C',
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 800,
+              fontSize: 'clamp(1rem, 2.2vw, 1.5rem)',
+              letterSpacing: '0.04em',
+              filter: 'drop-shadow(0 1px 4px rgba(0,0,0,0.5))',
+            }}
+          >
+            Bienvenido a esta gran familia
+          </p>
           <p className="animate-fade-in-up delay-300 mt-8 text-lg md:text-xl text-white/75 max-w-lg mx-auto leading-relaxed font-sans font-bold">
             Acceda a su panel privado para gestionar su información de manera segura y exclusiva.
           </p>
