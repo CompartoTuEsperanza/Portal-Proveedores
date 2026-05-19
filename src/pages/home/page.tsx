@@ -37,7 +37,7 @@ export default function Home() {
         </video>
         {/* Fallback gradient si el video no carga */}
         <div className="absolute inset-0 -z-10" style={{ background: 'linear-gradient(135deg, #3f0d17 0%, #7A1D2E 40%, #9f1239 70%, #2d0a10 100%)' }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-rose-950/60 via-rose-900/40 to-stone-900/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-rose-950/35 via-rose-900/20 to-stone-900/45" />
       </div>
 
       {/* Navbar */}
