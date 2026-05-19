@@ -21,7 +21,7 @@ export default function Home() {
       {/* Background imagen1.png con overlay marrón tenue */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <img
-          src={`${basePath}images/imagen1.png`}
+          src={`${basePath}images/imagen1.jpg`}
           alt=""
           className="w-full h-full object-cover object-center"
         />
