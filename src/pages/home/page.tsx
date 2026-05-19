@@ -18,26 +18,14 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen w-full flex flex-col">
-      {/* Background Video with Warm Golden Overlay */}
+      {/* Background imagen1.png con overlay marrón tenue */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="w-full h-full object-cover"
-          style={{ display: 'block' }}
-        >
-          <source
-            src={videoSrc}
-            type="video/mp4"
-          />
-        </video>
-        {/* Fallback gradient si el video no carga */}
-        <div className="absolute inset-0 -z-10" style={{ background: 'linear-gradient(135deg, #3f0d17 0%, #7A1D2E 40%, #9f1239 70%, #2d0a10 100%)' }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-rose-950/35 via-rose-900/20 to-stone-900/45" />
+        <img
+          src={`${basePath}images/imagen1.png`}
+          alt=""
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0" style={{ background: 'rgba(40,22,8,0.22)' }} />
       </div>
 
       {/* Navbar */}
@@ -113,13 +101,13 @@ export default function Home() {
           <p
             className="animate-fade-in-up delay-200"
             style={{
-              color: '#C0001A',
+              color: '#7A1D2E',
               fontFamily: "'Playfair Display', serif",
               fontWeight: 900,
               fontStyle: 'italic',
               fontSize: 'clamp(1.2rem, 2.8vw, 1.9rem)',
               letterSpacing: '0.04em',
-              textShadow: '0 1px 4px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.4)',
+              textShadow: '0 0 30px rgba(255,255,255,0.9), 0 0 60px rgba(255,255,255,0.5), 0 1px 4px rgba(0,0,0,0.2)',
             }}
           >
             Bienvenido a esta gran familia

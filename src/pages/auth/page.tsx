@@ -103,15 +103,17 @@ export default function Auth() {
           muted
           loop
           playsInline
-          poster="https://readdy.ai/api/search-image?query=Peruvian%20Andes%20mountains%20panorama%20at%20golden%20hour%2C%20majestic%20peaks%20and%20green%20valleys%2C%20warm%20amber%20light%2C%20cinematic%20aerial%20view%2C%20nature%20landscape%20photography%2C%20rich%20brown%20and%20golden%20tones%2C%20coffee%20and%20cacao%20growing%20region&width=1920&height=1080&seq=auth-video-poster&orientation=landscape"
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source
-            src="https://videos.pexels.com/video-files/857251/857251-hd_1920_1080_25fps.mp4"
+            src={`${typeof __BASE_PATH__ !== 'undefined' ? __BASE_PATH__ : '/'}videos/fondos3.mp4`}
             type="video/mp4"
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-rose-950/35 via-rose-900/20 to-stone-900/40" />
+        {/* Fallback */}
+        <div className="absolute inset-0 -z-10" style={{ background: 'linear-gradient(135deg, #3f0d17 0%, #7A1D2E 40%, #9f1239 70%, #2d0a10 100%)' }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-rose-950/35 via-rose-900/20 to-stone-900/45" />
       </div>
 
       {/* Logo */}
