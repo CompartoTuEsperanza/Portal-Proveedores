@@ -155,12 +155,6 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Footer bar */}
-      <footer className="relative z-10 w-full text-center py-6">
-        <p className="animate-fade-in-up delay-500 text-white/40 text-sm font-sans tracking-wide">
-          Portal exclusivo para proveedores registrados
-        </p>
-      </footer>
     </div>
   );
 }
