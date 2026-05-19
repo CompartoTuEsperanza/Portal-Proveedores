@@ -137,15 +137,19 @@ export default function Auth() {
             Comparto tu Esperanza
           </span>
           <span
-            className="leading-none mt-1.5"
+            className="mt-2 inline-block px-4 py-1.5 rounded-full"
             style={{
               color: '#C9A84C',
+              background: 'rgba(15,5,3,0.75)',
+              border: '1px solid rgba(201,168,76,0.55)',
               fontFamily: "'Playfair Display', serif",
               fontWeight: 800,
-              fontSize: '0.78rem',
+              fontSize: '0.72rem',
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
-              filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.45))',
+              boxShadow: '0 4px 14px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(201,168,76,0.15)',
+              backdropFilter: 'blur(8px)',
+              lineHeight: 1,
             }}
           >
             Portal para Miembros de la Familia
@@ -159,17 +163,21 @@ export default function Auth() {
         <div className="grid grid-cols-2 gap-3 mb-8">
           {/* Columna Regístrate */}
           <div className="flex flex-col items-stretch gap-1.5">
-            <p
-              className="text-center text-[11px] uppercase tracking-[0.15em] leading-tight"
-              style={{
-                color: '#C9A84C',
-                fontFamily: "'Playfair Display', serif",
-                fontWeight: 800,
-                filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.5))',
-              }}
-            >
-              ¿Es tu primer acceso?
-            </p>
+            <div className="flex justify-center">
+              <span
+                className="inline-block text-center text-[10px] uppercase tracking-[0.12em] leading-none px-3 py-1.5 rounded-full"
+                style={{
+                  color: '#C9A84C',
+                  background: 'rgba(15,5,3,0.8)',
+                  border: '1px solid rgba(201,168,76,0.5)',
+                  fontFamily: "'Playfair Display', serif",
+                  fontWeight: 800,
+                  boxShadow: '0 3px 10px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(201,168,76,0.15)',
+                }}
+              >
+                ¿Es tu primer acceso?
+              </span>
+            </div>
             <button
               onClick={() => switchMode("new")}
               className={`w-full py-2.5 px-3 rounded-full text-sm font-bold transition-all duration-200 cursor-pointer whitespace-nowrap ${
@@ -184,17 +192,21 @@ export default function Auth() {
 
           {/* Columna Iniciar Sesión */}
           <div className="flex flex-col items-stretch gap-1.5">
-            <p
-              className="text-center text-[11px] uppercase tracking-[0.15em] leading-tight"
-              style={{
-                color: '#C9A84C',
-                fontFamily: "'Playfair Display', serif",
-                fontWeight: 800,
-                filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.5))',
-              }}
-            >
-              ¿Ya tienes una cuenta?
-            </p>
+            <div className="flex justify-center">
+              <span
+                className="inline-block text-center text-[10px] uppercase tracking-[0.12em] leading-none px-3 py-1.5 rounded-full"
+                style={{
+                  color: '#C9A84C',
+                  background: 'rgba(15,5,3,0.8)',
+                  border: '1px solid rgba(201,168,76,0.5)',
+                  fontFamily: "'Playfair Display', serif",
+                  fontWeight: 800,
+                  boxShadow: '0 3px 10px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(201,168,76,0.15)',
+                }}
+              >
+                ¿Ya tienes una cuenta?
+              </span>
+            </div>
             <button
               onClick={() => switchMode("login")}
               className={`w-full py-2.5 px-3 rounded-full text-sm font-bold transition-all duration-200 cursor-pointer whitespace-nowrap ${
