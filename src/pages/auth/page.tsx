@@ -139,12 +139,13 @@ export default function Auth() {
           <span
             className="mt-2 inline-block"
             style={{
-              color: '#C9A84C',
+              color: '#B8860B',
               fontFamily: "'Playfair Display', serif",
               fontWeight: 900,
-              fontSize: '0.72rem',
+              fontSize: '0.82rem',
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
+              textShadow: '0 1px 3px rgba(0,0,0,0.8), 0 0 12px rgba(0,0,0,0.6)',
             }}
           >
             Portal para Miembros de la Familia

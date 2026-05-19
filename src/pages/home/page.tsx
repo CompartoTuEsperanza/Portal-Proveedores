@@ -113,13 +113,13 @@ export default function Home() {
           <p
             className="animate-fade-in-up delay-200"
             style={{
-              color: '#7A1D2E',
+              color: '#C0001A',
               fontFamily: "'Playfair Display', serif",
-              fontWeight: 800,
+              fontWeight: 900,
               fontStyle: 'italic',
               fontSize: 'clamp(1.2rem, 2.8vw, 1.9rem)',
               letterSpacing: '0.04em',
-              filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.9)) drop-shadow(0 0 40px rgba(255,255,255,0.5)) drop-shadow(0 1px 4px rgba(0,0,0,0.3))',
+              textShadow: '0 1px 4px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.4)',
             }}
           >
             Bienvenido a esta gran familia
