@@ -31,19 +31,34 @@ export default function DashboardSidebar() {
             alt="Logo"
             className="h-7 w-auto"
           />
-          <span
-            className="leading-none"
-            style={{
-              color: '#FECDD3',
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 950,
-              fontSize: '0.85rem',
-              letterSpacing: '0.04em',
-              filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.6))',
-            }}
-          >
-            Familia
-          </span>
+          <div className="flex flex-col">
+            <span
+              className="leading-none uppercase"
+              style={{
+                color: '#FECDD3',
+                fontFamily: "'Playfair Display', serif",
+                fontWeight: 950,
+                fontSize: '0.85rem',
+                letterSpacing: '0.04em',
+                filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.6))',
+              }}
+            >
+              Comparto tu Esperanza
+            </span>
+            <span
+              className="leading-none mt-0.5 uppercase"
+              style={{
+                color: '#C9A84C',
+                fontFamily: "'Playfair Display', serif",
+                fontWeight: 800,
+                fontSize: '0.55rem',
+                letterSpacing: '0.16em',
+                filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.5))',
+              }}
+            >
+              Familia
+            </span>
+          </div>
         </div>
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -146,19 +161,34 @@ export default function DashboardSidebar() {
                   alt="Logo"
                   className="h-7 w-auto"
                 />
-                <span
-            className="leading-none"
-            style={{
-              color: '#FECDD3',
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 950,
-              fontSize: '0.85rem',
-              letterSpacing: '0.04em',
-              filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.6))',
-            }}
-          >
-            Familia
-          </span>
+                <div className="flex flex-col">
+            <span
+              className="leading-none uppercase"
+              style={{
+                color: '#FECDD3',
+                fontFamily: "'Playfair Display', serif",
+                fontWeight: 950,
+                fontSize: '0.85rem',
+                letterSpacing: '0.04em',
+                filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.6))',
+              }}
+            >
+              Comparto tu Esperanza
+            </span>
+            <span
+              className="leading-none mt-0.5 uppercase"
+              style={{
+                color: '#C9A84C',
+                fontFamily: "'Playfair Display', serif",
+                fontWeight: 800,
+                fontSize: '0.55rem',
+                letterSpacing: '0.16em',
+                filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.5))',
+              }}
+            >
+              Familia
+            </span>
+          </div>
               </div>
               <button onClick={() => setMobileOpen(false)} className="p-1 cursor-pointer">
                 <i className="ri-close-line text-lg text-rose-700" />
