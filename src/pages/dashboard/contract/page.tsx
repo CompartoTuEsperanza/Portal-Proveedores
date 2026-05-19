@@ -30,18 +30,11 @@ export default function Contract() {
         </div>
 
         {/* Party Info */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="p-4 bg-white/50 rounded-lg">
-            <p className="text-xs font-medium text-rose-800/60 uppercase tracking-wide mb-2">Proveedor</p>
-            <p className="text-sm font-semibold text-rose-950">{user?.name}</p>
+        <div>
+          <div className="p-5 bg-black/40 backdrop-blur-md rounded-lg border border-rose-300/30">
+            <p className="text-xs font-bold text-rose-300 uppercase tracking-wide mb-2">Pilar de Nuestra Familia</p>
+            <p className="text-base font-bold text-rose-50">{user?.name}</p>
             <p className="text-sm font-semibold text-rose-200 mt-1">Código: {user?.supplier_id}</p>
-            <p className="text-sm text-rose-900/70">Categoría: {user?.category}</p>
-          </div>
-          <div className="p-4 bg-white/50 rounded-lg">
-            <p className="text-xs font-medium text-rose-800/60 uppercase tracking-wide mb-2">Comprador</p>
-            <p className="text-sm font-semibold text-rose-950">Legado Inca</p>
-            <p className="text-sm font-semibold text-rose-200 mt-1">RUC: 20548796321</p>
-            <p className="text-sm text-rose-900/70">Lima, Perú</p>
           </div>
         </div>
 
