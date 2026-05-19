@@ -110,7 +110,7 @@ export default function Auth() {
       <div className="relative z-10 mb-8 flex flex-col items-center gap-3">
         <img
           src={`${typeof __BASE_PATH__ !== 'undefined' ? __BASE_PATH__ : '/'}images/hoja.png`}
-          alt="Logo Portal de Proveedores"
+          alt="Logo Portal Familia"
           className="h-14 w-auto"
         />
         <div className="flex flex-col items-start">
@@ -214,12 +214,12 @@ export default function Auth() {
           <h2 className="text-xl font-serif font-bold text-rose-950 mb-1">
           {mode === "login"
             ? "Iniciar Sesión"
-            : "Registrarse como Proveedor"}
+            : "Únete a la Familia"}
         </h2>
         <p className="text-sm text-rose-800/60 mb-6">
           {mode === "login"
-            ? "Ingrese su código de proveedor y contraseña."
-            : "Complete sus datos para obtener un código de proveedor único."}
+            ? "Ingrese su código de miembro y contraseña."
+            : "Complete sus datos para obtener su código de miembro único."}
         </p>
 
         {/* Form */}
@@ -233,11 +233,11 @@ export default function Auth() {
           }
           className="space-y-4"
         >
-          {/* Código de proveedor - solo login y primer acceso */}
+          {/* Código de miembro - solo login y primer acceso */}
           {(mode === "login" || mode === "register") && (
             <div>
               <label htmlFor="supplier_id" className="block text-sm font-medium text-rose-900/80 mb-1.5">
-                Código de Proveedor
+                Código de Miembro
               </label>
               <input
                 id="supplier_id"
@@ -334,7 +334,7 @@ export default function Auth() {
             <div className="bg-emerald-50 border border-emerald-200 rounded-md p-3 flex items-start gap-2">
               <i className="ri-check-line text-emerald-600 mt-0.5 flex-shrink-0" />
               <p className="text-xs text-emerald-700">
-                Este proveedor ya tiene contraseña configurada. Use la pestaña{" "}
+                Este miembro ya tiene contraseña configurada. Use la pestaña{" "}
                 <button
                   type="button"
                   onClick={() => switchMode("login")}
@@ -350,7 +350,7 @@ export default function Auth() {
           {/* Nuevo código mostrado tras registro exitoso */}
           {newSupplierId && (
             <div className="bg-emerald-50 border border-emerald-200 rounded-md p-4 text-center">
-              <p className="text-xs text-emerald-700 mb-1">Su código de proveedor es:</p>
+              <p className="text-xs text-emerald-700 mb-1">Su código de miembro es:</p>
               <p className="text-lg font-bold font-mono text-emerald-800">{newSupplierId}</p>
               <p className="text-xs text-emerald-600 mt-1">Guárdelo para futuros accesos</p>
             </div>
