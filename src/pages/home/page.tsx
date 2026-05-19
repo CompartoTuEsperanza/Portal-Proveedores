@@ -90,7 +90,7 @@ export default function Home() {
               color: '#5C1422',
               fontFamily: "'Playfair Display', serif",
               fontWeight: 950,
-              fontSize: 'clamp(2.4rem, 6vw, 4.5rem)',
+              fontSize: 'clamp(2rem, 5vw, 3.6rem)',
               letterSpacing: '0.03em',
               WebkitTextStroke: '0.5px #5C1422',
               filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.55))',
@@ -104,7 +104,7 @@ export default function Home() {
               color: '#C9A84C',
               fontFamily: "'Playfair Display', serif",
               fontWeight: 800,
-              fontSize: 'clamp(1rem, 2.2vw, 1.5rem)',
+              fontSize: 'clamp(1.2rem, 2.8vw, 1.9rem)',
               letterSpacing: '0.04em',
               filter: 'drop-shadow(0 1px 4px rgba(0,0,0,0.5))',
             }}
@@ -112,7 +112,7 @@ export default function Home() {
             Bienvenido a esta gran familia
           </p>
           <p className="animate-fade-in-up delay-300 mt-8 text-lg md:text-xl text-white/75 max-w-lg mx-auto leading-relaxed font-sans font-bold">
-            Acceda a su panel privado para gestionar su información de manera segura y exclusiva.
+            Ingrese a su página personal para revisar su información de manera segura y privada.
           </p>
           <div className="animate-fade-in-scale delay-400 mt-12">
             <button
