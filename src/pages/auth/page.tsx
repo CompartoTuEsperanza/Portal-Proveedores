@@ -96,24 +96,14 @@ export default function Auth() {
 
   return (
     <div className="min-h-screen w-full bg-white/50 flex flex-col items-center justify-center px-4 py-8">
-      {/* Background Video */}
+      {/* Background imagen1.jpg */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source
-            src={`${typeof __BASE_PATH__ !== 'undefined' ? __BASE_PATH__ : '/'}videos/fondos3.mp4`}
-            type="video/mp4"
-          />
-        </video>
-        {/* Fallback */}
-        <div className="absolute inset-0 -z-10" style={{ background: 'linear-gradient(135deg, #3f0d17 0%, #7A1D2E 40%, #9f1239 70%, #2d0a10 100%)' }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-rose-950/35 via-rose-900/20 to-stone-900/45" />
+        <img
+          src={`${typeof __BASE_PATH__ !== 'undefined' ? __BASE_PATH__ : '/'}images/imagen1.jpg`}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0" style={{ background: 'rgba(40,22,8,0.72)' }} />
       </div>
 
       {/* Logo */}
