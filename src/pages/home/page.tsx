@@ -25,7 +25,7 @@ export default function Home() {
           alt=""
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0" style={{ background: 'rgba(40,22,8,0.22)' }} />
+        <div className="absolute inset-0" style={{ background: 'rgba(40,22,8,0.48)' }} />
       </div>
 
       {/* Navbar */}
