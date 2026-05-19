@@ -24,9 +24,9 @@ export default function DashboardHeader() {
         <div className="flex flex-col">
           <h1 className="text-sm font-medium text-rose-900/80 leading-tight">
             Bienvenido,{" "}
-            <span className="text-rose-100 font-bold">{user?.name}</span>
+            <span className="text-rose-100 font-extrabold">{user?.name}</span>
           </h1>
-          <p className="text-[11px] text-rose-100/85 font-semibold mt-0.5 capitalize">{today}</p>
+          <p className="text-[11px] text-rose-100 font-bold mt-0.5 capitalize">{today}</p>
         </div>
         <span className="h-8 w-px bg-rose-200/40" />
         <div className="flex items-center gap-2">
@@ -41,10 +41,10 @@ export default function DashboardHeader() {
       {/* Right: Supplier info + Avatar + Logout */}
       <div className="flex items-center gap-4">
         <div className="text-right hidden xl:block">
-          <p className="text-xs text-white font-bold">
+          <p className="text-xs text-rose-100 font-bold">
             Código: <span className="font-mono font-bold text-rose-100">{user?.supplier_id}</span>
           </p>
-          <p className="text-xs text-white font-bold capitalize">
+          <p className="text-xs text-rose-100 font-bold capitalize">
             Categoría: <span className="font-bold text-rose-100">{user?.category}</span>
           </p>
         </div>

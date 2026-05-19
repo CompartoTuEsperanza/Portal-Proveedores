@@ -98,15 +98,6 @@ export default function Profile() {
               </div>
             </div>
 
-            <div>
-              <label className="block text-xs font-bold text-rose-700 uppercase tracking-wide mb-1.5">
-                Categoría
-              </label>
-              <div className="flex items-center gap-2 px-4 py-3 bg-black/450 rounded-md border border-rose-300/40">
-                <i className="ri-folder-line text-rose-700/70" />
-                <span className="text-sm font-bold text-rose-950 capitalize">{user?.category}</span>
-              </div>
-            </div>
           </div>
         </div>
 

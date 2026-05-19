@@ -34,12 +34,12 @@ export default function DashboardSidebar() {
           <span
             className="leading-none"
             style={{
-              color: '#5C1422',
+              color: '#FECDD3',
               fontFamily: "'Playfair Display', serif",
-              fontWeight: 900,
-              fontSize: '0.75rem',
-              letterSpacing: '0.03em',
-              filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.8))',
+              fontWeight: 950,
+              fontSize: '0.85rem',
+              letterSpacing: '0.04em',
+              filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.6))',
             }}
           >
             Familia
@@ -67,26 +67,25 @@ export default function DashboardSidebar() {
               <span
                 className="leading-none uppercase"
                 style={{
-                  color: '#5C1422',
+                  color: '#FECDD3',
                   fontFamily: "'Playfair Display', serif",
-                  fontWeight: 900,
-                  fontSize: '0.78rem',
-                  letterSpacing: '0.04em',
-                  WebkitTextStroke: '0.25px #5C1422',
-                  filter: 'drop-shadow(0 0 7px rgba(255,255,255,0.85))',
+                  fontWeight: 950,
+                  fontSize: '0.95rem',
+                  letterSpacing: '0.05em',
+                  textShadow: '0 0 12px rgba(254,205,211,0.45), 0 2px 6px rgba(0,0,0,0.6)',
                 }}
               >
                 Familia
               </span>
               <span
-                className="leading-none mt-0.5"
+                className="leading-none mt-1"
                 style={{
-                  color: '#5C1422',
+                  color: '#FECDD3',
                   fontFamily: "'Playfair Display', serif",
-                  fontWeight: 700,
-                  fontSize: '0.65rem',
-                  letterSpacing: '0.03em',
-                  filter: 'drop-shadow(0 0 5px rgba(255,255,255,0.65))',
+                  fontWeight: 800,
+                  fontSize: '0.7rem',
+                  letterSpacing: '0.04em',
+                  textShadow: '0 0 8px rgba(254,205,211,0.35), 0 1px 4px rgba(0,0,0,0.55)',
                 }}
               >
                 Comparto tu Esperanza
@@ -150,12 +149,12 @@ export default function DashboardSidebar() {
                 <span
             className="leading-none"
             style={{
-              color: '#5C1422',
+              color: '#FECDD3',
               fontFamily: "'Playfair Display', serif",
-              fontWeight: 900,
-              fontSize: '0.75rem',
-              letterSpacing: '0.03em',
-              filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.8))',
+              fontWeight: 950,
+              fontSize: '0.85rem',
+              letterSpacing: '0.04em',
+              filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.6))',
             }}
           >
             Familia
