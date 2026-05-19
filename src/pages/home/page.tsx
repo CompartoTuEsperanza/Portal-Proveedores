@@ -25,7 +25,7 @@ export default function Home() {
           alt=""
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0" style={{ background: 'rgba(40,22,8,0.48)' }} />
+        <div className="absolute inset-0" style={{ background: 'rgba(40,22,8,0.62)' }} />
       </div>
 
       {/* Navbar */}
@@ -105,6 +105,9 @@ export default function Home() {
               fontFamily: "'Playfair Display', serif",
               fontWeight: 950,
               fontStyle: 'italic',
+              fontSize: 'clamp(1.2rem, 2.8vw, 1.9rem)',
+              letterSpacing: '0.04em',
+              textShadow: '0 0 30px rgba(255,255,255,0.9), 0 0 60px rgba(255,255,255,0.5), 0 1px 4px rgba(0,0,0,0.2)',
             }}
           >
             Bienvenido a esta gran familia
