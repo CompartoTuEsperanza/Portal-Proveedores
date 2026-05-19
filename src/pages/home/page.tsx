@@ -97,13 +97,13 @@ export default function Home() {
             <h1
               className="uppercase tracking-tight leading-[1.05]"
               style={{
-                color: '#5C1422',
+                color: '#C9A84C',
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 950,
                 fontSize: 'clamp(2rem, 5vw, 3.6rem)',
                 letterSpacing: '0.03em',
-                WebkitTextStroke: '0.5px #5C1422',
-                filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.55))',
+                WebkitTextStroke: '0.5px #C9A84C',
+                filter: 'drop-shadow(0 0 18px rgba(201,168,76,0.5)) drop-shadow(0 2px 8px rgba(0,0,0,0.55))',
                 margin: 0,
               }}
             >
@@ -113,12 +113,13 @@ export default function Home() {
           <p
             className="animate-fade-in-up delay-200"
             style={{
-              color: '#C9A84C',
+              color: '#7A1D2E',
               fontFamily: "'Playfair Display', serif",
               fontWeight: 800,
+              fontStyle: 'italic',
               fontSize: 'clamp(1.2rem, 2.8vw, 1.9rem)',
               letterSpacing: '0.04em',
-              filter: 'drop-shadow(0 1px 4px rgba(0,0,0,0.5))',
+              filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.9)) drop-shadow(0 0 40px rgba(255,255,255,0.5)) drop-shadow(0 1px 4px rgba(0,0,0,0.3))',
             }}
           >
             Bienvenido a esta gran familia
