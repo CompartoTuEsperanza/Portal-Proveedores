@@ -109,7 +109,7 @@ export default function Home() {
           <p
             className="animate-fade-in-up delay-200"
             style={{
-              color: '#7A1D2E',
+              color: '#CC0000',
               fontFamily: "'Playfair Display', serif",
               fontWeight: 950,
               fontStyle: 'italic',

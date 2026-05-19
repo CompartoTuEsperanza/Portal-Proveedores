@@ -117,12 +117,12 @@ export default function Auth() {
           <span
             className="uppercase leading-none"
             style={{
-              color: '#5C1422',
+              color: '#CC0000',
               fontFamily: "'Playfair Display', serif",
               fontWeight: 950,
               fontSize: '1.6rem',
               letterSpacing: '0.06em',
-              WebkitTextStroke: '0.5px #5C1422',
+              WebkitTextStroke: '0.5px #CC0000',
               filter: 'drop-shadow(0 1px 5px rgba(0,0,0,0.35))',
             }}
           >
