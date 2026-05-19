@@ -137,19 +137,14 @@ export default function Auth() {
             Comparto tu Esperanza
           </span>
           <span
-            className="mt-2 inline-block px-4 py-1.5 rounded-full"
+            className="mt-2 inline-block"
             style={{
               color: '#C9A84C',
-              background: 'rgba(15,5,3,0.75)',
-              border: '1px solid rgba(201,168,76,0.55)',
               fontFamily: "'Playfair Display', serif",
-              fontWeight: 800,
+              fontWeight: 900,
               fontSize: '0.72rem',
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
-              boxShadow: '0 4px 14px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(201,168,76,0.15)',
-              backdropFilter: 'blur(8px)',
-              lineHeight: 1,
             }}
           >
             Portal para Miembros de la Familia
