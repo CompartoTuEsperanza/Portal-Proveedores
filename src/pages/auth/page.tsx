@@ -156,37 +156,56 @@ export default function Auth() {
       {/* Auth Card */}
       <div className="relative z-10 w-full max-w-md bg-white/90 backdrop-blur-md rounded-xl shadow-xl border border-rose-100/40 p-6 md:p-8">
         {/* Tabs */}
-        <div className="flex rounded-full bg-rose-50/60 p-1 mb-8">
-          <button
-            onClick={() => switchMode("login")}
-            className={`flex-1 py-2.5 px-1 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
-              mode === "login"
-                ? "bg-rose-800 text-white shadow-sm"
-                : "text-rose-900/70 hover:text-rose-950"
-            }`}
-          >
-            Acceso Normal
-          </button>
-          <button
-            onClick={() => switchMode("register")}
-            className={`flex-1 py-2.5 px-1 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
-              mode === "register"
-                ? "bg-rose-800 text-white shadow-sm"
-                : "text-rose-900/70 hover:text-rose-950"
-            }`}
-          >
-            Primer Acceso
-          </button>
-          <button
-            onClick={() => switchMode("new")}
-            className={`flex-1 py-2.5 px-1 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
-              mode === "new"
-                ? "bg-rose-800 text-white shadow-sm"
-                : "text-rose-900/70 hover:text-rose-950"
-            }`}
-          >
-            Nuevo
-          </button>
+        <div className="grid grid-cols-2 gap-3 mb-8">
+          {/* Columna Regístrate */}
+          <div className="flex flex-col items-stretch gap-1.5">
+            <p
+              className="text-center text-[11px] uppercase tracking-[0.15em] leading-tight"
+              style={{
+                color: '#C9A84C',
+                fontFamily: "'Playfair Display', serif",
+                fontWeight: 800,
+                filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.5))',
+              }}
+            >
+              ¿Es tu primer acceso?
+            </p>
+            <button
+              onClick={() => switchMode("new")}
+              className={`w-full py-2.5 px-3 rounded-full text-sm font-bold transition-all duration-200 cursor-pointer whitespace-nowrap ${
+                mode === "new"
+                  ? "bg-rose-800 text-white shadow-md"
+                  : "bg-rose-50/60 text-rose-900/70 hover:text-rose-950 hover:bg-rose-100/70"
+              }`}
+            >
+              Regístrate
+            </button>
+          </div>
+
+          {/* Columna Iniciar Sesión */}
+          <div className="flex flex-col items-stretch gap-1.5">
+            <p
+              className="text-center text-[11px] uppercase tracking-[0.15em] leading-tight"
+              style={{
+                color: '#C9A84C',
+                fontFamily: "'Playfair Display', serif",
+                fontWeight: 800,
+                filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.5))',
+              }}
+            >
+              ¿Ya tienes una cuenta?
+            </p>
+            <button
+              onClick={() => switchMode("login")}
+              className={`w-full py-2.5 px-3 rounded-full text-sm font-bold transition-all duration-200 cursor-pointer whitespace-nowrap ${
+                mode === "login"
+                  ? "bg-rose-800 text-white shadow-md"
+                  : "bg-rose-50/60 text-rose-900/70 hover:text-rose-950 hover:bg-rose-100/70"
+              }`}
+            >
+              Iniciar Sesión
+            </button>
+          </div>
         </div>
 
         {/* Content with transition */}
@@ -195,16 +214,12 @@ export default function Auth() {
           <h2 className="text-xl font-serif font-bold text-rose-950 mb-1">
           {mode === "login"
             ? "Iniciar Sesión"
-            : mode === "register"
-              ? "Configurar Contraseña"
-              : "Registrarse como Proveedor"}
+            : "Registrarse como Proveedor"}
         </h2>
         <p className="text-sm text-rose-800/60 mb-6">
           {mode === "login"
             ? "Ingrese su código de proveedor y contraseña."
-            : mode === "register"
-              ? "Ingrese su código de proveedor para crear su contraseña."
-              : "Complete sus datos para obtener un código de proveedor único."}
+            : "Complete sus datos para obtener un código de proveedor único."}
         </p>
 
         {/* Form */}
