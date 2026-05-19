@@ -90,7 +90,7 @@ export default function DashboardSidebar() {
                   textShadow: '0 0 12px rgba(254,205,211,0.45), 0 2px 6px rgba(0,0,0,0.6)',
                 }}
               >
-                Familia
+                Comparto tu Esperanza
               </span>
               <span
                 className="leading-none mt-1"
@@ -103,7 +103,7 @@ export default function DashboardSidebar() {
                   textShadow: '0 0 8px rgba(254,205,211,0.35), 0 1px 4px rgba(0,0,0,0.55)',
                 }}
               >
-                Comparto tu Esperanza
+                Familia
               </span>
             </div>
           </div>

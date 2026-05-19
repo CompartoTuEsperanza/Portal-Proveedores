@@ -84,20 +84,32 @@ export default function Home() {
       {/* Hero Content */}
       <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 text-center">
         <div className="max-w-3xl mx-auto">
-          <h1
-            className="animate-fade-in-up uppercase tracking-tight leading-[1.05] mb-4"
-            style={{
-              color: '#5C1422',
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 950,
-              fontSize: 'clamp(2rem, 5vw, 3.6rem)',
-              letterSpacing: '0.03em',
-              WebkitTextStroke: '0.5px #5C1422',
-              filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.55))',
-            }}
-          >
-            Comparto tu Esperanza
-          </h1>
+          <div className="animate-fade-in-up flex items-center justify-center gap-4 mb-4 flex-wrap">
+            <img
+              src={`${typeof __BASE_PATH__ !== 'undefined' ? __BASE_PATH__ : '/'}images/hoja.png`}
+              alt="Hoja"
+              style={{
+                height: 'clamp(2.5rem, 6vw, 4.5rem)',
+                width: 'auto',
+                filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.5))',
+              }}
+            />
+            <h1
+              className="uppercase tracking-tight leading-[1.05]"
+              style={{
+                color: '#5C1422',
+                fontFamily: "'Playfair Display', serif",
+                fontWeight: 950,
+                fontSize: 'clamp(2rem, 5vw, 3.6rem)',
+                letterSpacing: '0.03em',
+                WebkitTextStroke: '0.5px #5C1422',
+                filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.55))',
+                margin: 0,
+              }}
+            >
+              Comparto tu Esperanza
+            </h1>
+          </div>
           <p
             className="animate-fade-in-up delay-200"
             style={{

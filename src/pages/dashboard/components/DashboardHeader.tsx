@@ -22,7 +22,7 @@ export default function DashboardHeader() {
       {/* Left: Welcome + Date */}
       <div className="flex items-center gap-4">
         <div className="flex flex-col">
-          <h1 className="text-sm font-medium text-rose-900/80 leading-tight">
+          <h1 className="text-sm font-bold text-rose-100 leading-tight">
             Bienvenido,{" "}
             <span className="text-rose-100 font-extrabold">{user?.name}</span>
           </h1>
@@ -55,7 +55,7 @@ export default function DashboardHeader() {
 
         <button
           onClick={handleLogout}
-          className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-rose-900 hover:text-red-700 hover:bg-red-50 rounded-md transition-all duration-200 cursor-pointer whitespace-nowrap hover:-translate-y-0.5 hover:shadow-sm active:scale-95"
+          className="flex items-center gap-2 px-3 py-2 text-sm font-extrabold text-rose-100 hover:text-rose-50 hover:bg-rose-900/50 rounded-md transition-all duration-200 cursor-pointer whitespace-nowrap hover:-translate-y-0.5 hover:shadow-sm active:scale-95"
         >
           <span className="w-4 h-4 flex items-center justify-center">
             <i className="ri-logout-box-r-line" />
